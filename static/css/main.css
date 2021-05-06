@@ -1,0 +1,74 @@
+/*importando fuente roboto de google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+/*variables para diseño*/
+:root{
+    --verde-fuerte: #022422;
+    --verde-claro: #E8FFE6;
+    --blanco: #fff;
+    --fuente-principal: 'Roboto', sans-serif;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--fuente-principal);    
+}
+/*
+para roboto normal (Texto en general):
+    font-family: var(--fuente-principal);
+
+para roboto mediano (Subtitulos):
+    font-family: 'Roboto';
+    font-weight: 500;
+
+para roboto negrita (Titulos):
+    font-family: 'Roboto';
+    font-weight: 700;
+*/
+
+/*--------------------------empieza N A V B A R -----------*/
+.navbar{
+    background-color: var(--verde-fuerte) !important;
+    font-size: 20px;
+}
+.navbar-brand{
+    margin-left: 20px;
+}
+.navbar-nav.mr-auto.right{
+    margin-right: 20px !important;
+}
+/*--------------------------termina N A V B A R -----------*/
+
+/*--------------------------empieza C O N T A C T O -----------*/
+.container{
+    border: solid 5px var(--verde-fuerte);
+    border-radius: 50px;
+    padding: 30px;
+    width: 70%;
+}
+.superior, .inferior{
+    display: flex;
+    justify-content: space-around;
+}
+.contacto-user{
+    width: 150px;
+    height: 150px;
+}
+.usuario{
+    text-align: center;
+}
+.usuario p{
+    margin-bottom: 0;
+}
+.nombre{
+    font-family: 'Roboto';
+    font-weight: 700;
+    margin-top: 10px;
+}
+.title{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/*--------------------------termina C O N T A C T O -----------*/
+
