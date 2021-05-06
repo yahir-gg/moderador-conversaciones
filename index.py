@@ -12,7 +12,9 @@ def index():
 def contacto():
     return render_template('contacto.html')
 
-
+@app.route('/cargar')
+def cargar():
+    return render_template('cargar.html')
 
 # ctrl+shift+r para recargar sin cache
 if __name__ == '__main__':
