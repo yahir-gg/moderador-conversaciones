@@ -11,8 +11,10 @@ def index():
 @app.route('/contacto')
 def contacto():
     return render_template('contacto.html')
-
-
+ 
+@app.route('/chat')
+def chat():
+    return render_template('chat.html')
 
 # ctrl+shift+r para recargar sin cache
 if __name__ == '__main__':
