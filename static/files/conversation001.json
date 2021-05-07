@@ -1,0 +1,152 @@
+{
+ "name": "Tania",
+ "type": "personal_chat",
+ "id": 1559865863,
+ "messages": [
+  {
+   "id": 757,
+   "type": "service",
+   "date": "2021-04-28T19:48:15",
+   "actor": "Tania",
+   "actor_id": "user1559865863",
+   "action": "joined_telegram",
+   "text": ""
+  },
+  {
+   "id": 766,
+   "type": "message",
+   "date": "2021-05-04T14:08:43",
+   "from": "Yahir 🙄",
+   "from_id": "user1354139004",
+   "text": "Hola Tania, esto va a ser una prueba... Primero vamos a enviarnos mensajes positivos va?"
+  },
+  {
+   "id": 767,
+   "type": "message",
+   "date": "2021-05-04T14:08:56",
+   "from": "Tania",
+   "from_id": "user1559865863",
+   "text": "Ok"
+  },
+  {
+   "id": 768,
+   "type": "message",
+   "date": "2021-05-04T14:09:03",
+   "from": "Tania",
+   "from_id": "user1559865863",
+   "text": "Como te quiero"
+  },
+  {
+   "id": 769,
+   "type": "message",
+   "date": "2021-05-04T14:09:17",
+   "from": "Yahir 🙄",
+   "from_id": "user1354139004",
+   "text": "Jaja ya vas a empezar de cursi"
+  },
+  {
+   "id": 770,
+   "type": "message",
+   "date": "2021-05-04T14:09:30",
+   "from": "Yahir 🙄",
+   "from_id": "user1354139004",
+   "text": "Yo también te quiero"
+  },
+  {
+   "id": 771,
+   "type": "message",
+   "date": "2021-05-04T14:09:39",
+   "from": "Yahir 🙄",
+   "from_id": "user1354139004",
+   "text": "Ahora mensajes negativos"
+  },
+  {
+   "id": 772,
+   "type": "message",
+   "date": "2021-05-04T14:09:49",
+   "from": "Yahir 🙄",
+   "from_id": "user1354139004",
+   "text": "Pero aveces me caes mal, aveces no te soporto..."
+  },
+  {
+   "id": 773,
+   "type": "message",
+   "date": "2021-05-04T14:10:28",
+   "from": "Tania",
+   "from_id": "user1559865863",
+   "text": "Estamos en la misma situación aveces eres muy fastidioso.."
+  },
+  {
+   "id": 774,
+   "type": "message",
+   "date": "2021-05-04T14:10:33",
+   "from": "Tania",
+   "from_id": "user1559865863",
+   "text": "😡"
+  },
+  {
+   "id": 775,
+   "type": "message",
+   "date": "2021-05-04T14:10:43",
+   "from": "Yahir 🙄",
+   "from_id": "user1354139004",
+   "text": "Sin emojis :/"
+  },
+  {
+   "id": 776,
+   "type": "message",
+   "date": "2021-05-04T14:10:53",
+   "from": "Yahir 🙄",
+   "from_id": "user1354139004",
+   "text": "Dime algo muy negativo"
+  },
+  {
+   "id": 777,
+   "type": "message",
+   "date": "2021-05-04T14:11:32",
+   "from": "Yahir 🙄",
+   "from_id": "user1354139004",
+   "text": "Ojalá que en el videojuego qué etas jugando se mueran todos, odio a todos tus personajes"
+  },
+  {
+   "id": 778,
+   "type": "message",
+   "date": "2021-05-04T14:12:13",
+   "from": "Tania",
+   "from_id": "user1559865863",
+   "text": "Eres un grosero ya muerete"
+  },
+  {
+   "id": 779,
+   "type": "message",
+   "date": "2021-05-04T14:12:24",
+   "from": "Yahir 🙄",
+   "from_id": "user1354139004",
+   "text": "Oye, viste lo del metro? Se cayó... Y murieron personas... Los que construyeron esa línea son unos pendejos"
+  },
+  {
+   "id": 780,
+   "type": "message",
+   "date": "2021-05-04T14:12:59",
+   "from": "Tania",
+   "from_id": "user1559865863",
+   "text": "Son un par de corruptos y rateros se pasan de pendejos"
+  },
+  {
+   "id": 781,
+   "type": "message",
+   "date": "2021-05-04T14:13:32",
+   "from": "Yahir 🙄",
+   "from_id": "user1354139004",
+   "text": "Si jaja... Con esto ya es suficiente tania."
+  },
+  {
+   "id": 782,
+   "type": "message",
+   "date": "2021-05-04T14:13:34",
+   "from": "Tania",
+   "from_id": "user1559865863",
+   "text": "Ojalá se mueran los desgraciados.."
+  }
+ ]
+}
