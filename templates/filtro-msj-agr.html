@@ -6,10 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}">
-    <title>Contacto</title>
+    <title>Filtro de mensajes agresivos</title>
 </head>
 <body>
-    <!--Empieza barra de navegación (navbar)-->
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#">Inicio</a>
@@ -27,10 +26,22 @@
                   <a class="nav-link" href="#">Acerca <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                  <a class="nav-link" href="#">Contacto <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="{{url_for('contacto')}}">Contacto <span class="sr-only">(current)</span></a>
                 </li>
               </ul>
             </div>
           </nav>
     </header>
-    <!--Termina barra de navegación (navbar)-->
+    <main>
+        <h2>Mensajes</h2>
+        
+            <div class="mensajes-agresivos">
+
+                {%for elem in resModulo1%}
+                    <div class="mensaje">{{elem}}</div>
+                {%endfor%}
+                
+            </div>
+    </main>
+</body>
+</html>

@@ -71,4 +71,16 @@ para roboto negrita (Titulos):
     margin-bottom: 10px;
 }
 /*--------------------------termina C O N T A C T O -----------*/
+/*--------------------------empieza M E N S A J E S   A G R E S I V O S -----------*/
+.mensajes-agresivos{
+    width: 900px;
+    margin: auto;
+}
+.mensaje{
+    padding: 10px;
+    margin: 10px 0;
+    border: solid 3px var(--verde-fuerte);
+    border-radius: 50px;
+}
+/*--------------------------termina M E N S A J E S   A G R E S I V O S -----------*/
 

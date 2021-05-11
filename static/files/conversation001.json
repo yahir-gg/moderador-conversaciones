@@ -4,15 +4,6 @@
  "id": 1559865863,
  "messages": [
   {
-   "id": 757,
-   "type": "service",
-   "date": "2021-04-28T19:48:15",
-   "actor": "Tania",
-   "actor_id": "user1559865863",
-   "action": "joined_telegram",
-   "text": ""
-  },
-  {
    "id": 766,
    "type": "message",
    "date": "2021-05-04T14:08:43",
