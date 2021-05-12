@@ -91,12 +91,20 @@ def iniciar():
     # list
     mensajes=[]
     for i in data['messages']:
-    # print(i['text'])
-        mensajes.append(i['text'])
-    # Closing file
+        # print(i['text'])
+        mensajes.append(i)
+
+    # print(len(mensajes))
+    cont = 0
+    # print(mensajes)
+    for i in mensajes:
+        if i['text'] == "":
+            mensajes.pop(cont)
+        cont += 1
+
     f.close()
 
-    mensajes_nolist=[]
+    """mensajes_nolist=[]
     # print("imp\n", mensajes)
     for elem in mensajes:
         if type(elem) == str:
@@ -107,27 +115,26 @@ def iniciar():
                 # process_text(elem2)
                 mensajes_nolist.append(elem2)
         else:
-            continue
+            continue"""
 
     determinantes = []
     mensajes_agresivos = []
-    for elem in mensajes_nolist:
-        if type(elem)==str:
-            # print(elem)
-            determinante = model.predict(vect.transform([elem]))
-            if determinante == 1:
-                mensajes_agresivos.append(elem)
-            determinantes.append(determinante)
-
+    for elem in mensajes:
+        aux = elem['text']
+        determinante = model.predict(vect.transform([aux]))
+        if determinante == 1:
+            mensajes_agresivos.append(elem)
+        determinantes.append(determinante)
+    print('dt:',determinantes)
     contador = 0
-    for elem in determinantes:
+    """for elem in determinantes:
         if elem == 0:
             tipo = 'NO AGRESIVO'
             print('El mensaje ',contador,' es ',tipo)
         else:
             tipo = 'AGRESIVO'
             print('El mensaje ',contador,' es ',tipo)
-        contador = contador + 1
+        contador = contador + 1"""
 
 
     with open('text_classifier', 'wb') as picklefile:
