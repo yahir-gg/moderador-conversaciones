@@ -34,24 +34,47 @@
         </nav>
   </header>
   <!--Termina barra de navegación (navbar)-->
-
-  <!--Empieza el contendio-->
-    <!--contenido es la caja principal-->
-    <div class="contenido">
-      <div class="izquierda">
-        <h1>Analiza la<br>agresividad de <br> tu conversación</h1>
-        <br>
-        <h4>Identifica los mensajes<br>agresivos,crea reportes<br>y guarda evidencia</h4>
-        <br><br>
-        <center><a href="eleccion" style="text-decoration:none;color:var(--blanco)" class="boton">Iniciar</a></center>
-      </div>
-      <div class="derecha">
-        <div class="imgen">
-          <img class="img" src="{{url_for('static', filename='media/fondo.webp')}}" alt="imagen de fondo">
+  <!--Empieza el contenido para la elección de usuarios-->
+    <div class="contenedor">
+      <h3>Elige el modo para iniciar:</h3>
+      <div class="c-izquierda">
+        <div class="imagenes">
+          <img class="c-img" src="{{url_for('static', filename='media/imagen_usuario_redes_sociales.jpg')}}" alt="imagen rs">
+          <br>
+          <img class="c-img" src="{{url_for('static', filename='media/imagen-grupo-vulnerable.jpg')}}" alt="imagen gv">
+          <br>
+          <img class="c-img" src="{{url_for('static', filename='media/imagen-academico.jpg')}}" alt="imagen academico">
         </div>
+      </div>
+
+      <div class="c-derecha">
+        <article>
+          <h5>Participante de redes sociales</h5>
+          <p>Puedes simular un chat para identificar y/o bloquear mensajes agresivos<br>
+          y usuarios agresivos</p>
+          <a href="" style="text-decoration:none;color:var(--blanco)" class="button">Iniciar</a>
+        </article>
+        <br>
+
+        <article>
+          <h5>Participantes de grupo vulnerable</h5>
+          <p>Puedes identificary/o bloquear mensajes agresivos para generar un reporte<br>
+            sobre evidencia de agresiones</p>
+          <a href="" style="text-decoration:none;color:var(--blanco)" class="button">Iniciar</a>
+        </article>
+        <br>
+
+        <article>
+          <h5>Académico</h5>
+          <p>Puedes analizar comportamientos agresivos en conversaciones con la<br>
+          ayuda de un análisis de agresividad hecho por el sistema</p>
+          <a href="" style="text-decoration:none;color:var(--blanco)" class="button">Iniciar</a>
+        </article>
+
       </div>
     </div>
 
-  <!--Termina el contenido-->
+
+
 </body>
 </html>
