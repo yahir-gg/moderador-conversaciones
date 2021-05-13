@@ -8,6 +8,10 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
+@app.route('/eleccion')
+def eleccion():
+    return render_template('eleccion_usuarios.html')
+
 @app.route('/contacto')
 def contacto():
     return render_template('contacto.html')
@@ -19,6 +23,7 @@ def chat():
 @app.route('/cargar')
 def cargar():
     return render_template('cargar.html')
+
 
 # ctrl+shift+r para recargar sin cache
 if __name__ == '__main__':
