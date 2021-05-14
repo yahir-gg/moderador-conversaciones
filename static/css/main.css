@@ -38,17 +38,18 @@ para roboto negrita (Titulos):
     margin-right: 20px !important;
 }
 /*--------------------------termina N A V B A R -----------*/
-
 /*--------------------------empieza C O N T A C T O -----------*/
 .container{
     border: solid 5px var(--verde-fuerte);
     border-radius: 50px;
     padding: 30px;
     width: 70%;
+
 }
 .superior, .inferior{
     display: flex;
     justify-content: space-around;
+
 }
 .contacto-user{
     width: 150px;
@@ -72,3 +73,42 @@ para roboto negrita (Titulos):
 }
 /*--------------------------termina C O N T A C T O -----------*/
 
+
+/*--------------------------empieza C A R G A R / A R C H I V O-----------*/
+.instru{
+    border: solid 5px var(--verde-fuerte);
+    border-radius: 15px 50px;
+    padding: 30px;
+    font-size:20px;
+    text-align: justify;
+    position:absolute;/*relative,fixed,absolute,sticky*/
+    left:100px; /*left*/
+    top:120px; /*bottom*/
+    width:500px;/*anchura del elemto*/
+    height:380px;/*altura del elemento*/ 
+    background-color: #E8FFE6;
+}
+.archivo{
+    border: solid 5px var(--verde-fuerte);
+    border-radius: 15px 50px;
+    padding: 30px;
+    font-size:20px;
+    text-align:justify;
+    position:absolute;/*relative,fixed,absolute,sticky*/
+    left:680px; /*left*/
+    top:120px; /*bottom*/
+    width:600px;/*anchura del elemto*/
+    height:380px;/*altura del elemento*/ 
+}
+.continuar{
+    border-radius: 15px;
+    width: 100px;
+    height: 40px;
+    background-color: #022422;
+    text-align: center;
+    color:white;
+    left:250px;
+    top:300px;
+    position:absolute;
+}
+/*--------------------------termina C A R G A R / A R C H I V O-----------*/

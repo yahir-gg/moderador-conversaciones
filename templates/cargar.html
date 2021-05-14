@@ -34,3 +34,34 @@
           </nav>
     </header>
     <!--Termina barra de navegación (navbar)-->
+    <!--Empieza seccion de cargar archivo-->
+    <!--container es la caja de Instrucciones-->
+    <div class="instru">
+        <h2>INSTRUCCIONES</h2>
+        <h5>1. Seleccione su archivo<br>
+            2. Click en cargar archivo<br>
+            3. Click en continuar</h5>
+            <br>
+         <p>Las conversaciones analizadas no 
+            son almacenadas en nuestros servidores, 
+            simplemente se analizan y una vez calculados 
+            los resultados, estas son eliminadas.
+        </p>
+    </div>
+    <!--Termina container es la caja de Instrucciones-->
+    <!--superior es la caja que contiene el cargar achivo de conversacion-->
+    <div class="archivo">
+        <h2>Cargar archivo de conversación:</h2>
+        <h3> NOTA:</h3><p>Solo se admiten archivos con formato JSON</p>
+        
+        <form action="/uploader" method="POST" enctype="multipart/form-data">
+            <input type="file" name="archivo">
+            <br><br>
+            <input type="submit"value="Cargar archivo">
+            <div class="msg">{{ msg }}</div>
+         </form>
+             <div class="continuar"> 
+                <p>Continuar</p>
+            </div>
+    </div>
+    <!--Termina container es la caja que contiene el cargar achivo de conversacion -->
