@@ -94,13 +94,21 @@ def iniciar():
         # print(i['text'])
         mensajes.append(i)
 
+    
+        
     # print(len(mensajes))
     cont = 0
     # print(mensajes)
+    
     for i in mensajes:
         if i['text'] == "":
             mensajes.pop(cont)
         cont += 1
+    conv_users = []
+    for elem in mensajes:
+        if elem['type'] == 'message':
+            if elem['from'] not in conv_users:
+                conv_users.append(elem['from'])
 
     f.close()
 
@@ -119,6 +127,9 @@ def iniciar():
 
     determinantes = []
     mensajes_agresivos = []
+    
+
+
     for elem in mensajes:
         aux = elem['text']
         determinante = model.predict(vect.transform([aux]))
@@ -139,4 +150,4 @@ def iniciar():
 
     with open('text_classifier', 'wb') as picklefile:
         pickle.dump(model,picklefile)
-    return mensajes_agresivos
+    return mensajes_agresivos, conv_users
