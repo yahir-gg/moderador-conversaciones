@@ -1,4 +1,7 @@
 from flask import Flask, render_template
+import modulo2
+
+res = modulo2.iniciar()
 
 # objeto apara crear rutas
 app = Flask(__name__)
@@ -11,14 +14,10 @@ def index():
 @app.route('/contacto')
 def contacto():
     return render_template('contacto.html')
-  
-@app.route('/chat')
-def chat():
-    return render_template('chat.html')
-
-@app.route('/cargar')
-def cargar():
-    return render_template('cargar.html')
+    
+@app.route('/bloqueaMsj')
+def bloquea():
+    return render_template('bloqueaMsj.html', resModulo2=res)
 
 # ctrl+shift+r para recargar sin cache
 if __name__ == '__main__':

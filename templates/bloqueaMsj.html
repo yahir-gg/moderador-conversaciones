@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}">
+  <title>BloqueaMsj</title>
+</head>
+
+<body>
+  <!--Empieza barra de navegación (navbar)-->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Inicio</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Analizar <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+        <ul class="navbar-nav mr-auto right">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Acerca <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Contacto <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!--Termina barra de navegación (navbar)-->
+  
+  <!--Contenedor de mensajes no agresivos-->
+  <main class="bloqueo">
+    <h2 class="title">Conversación sin agresividad</h2>
+    <div class="container-bloqueo">
+      {%for elem in resModulo2%}
+      <div class="mensajes-Noagresivos">
+        <img class="foto-user" src="{{ url_for('static', filename='media/usuario.png') }}" alt="imagen de usuario">
+        <p class="msj">{{elem}}</p>
+      </div>
+      {%endfor%}
+      <div class="button-noAgresivo">
+        <button class="button-bloquea" onclick="location.href='index'">Inicio</button>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
