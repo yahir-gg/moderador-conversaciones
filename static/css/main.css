@@ -12,6 +12,7 @@
     margin: 0;
     padding: 0;
     font-family: var(--fuente-principal);    
+    
 }
 /*
 para roboto normal (Texto en general):
@@ -70,5 +71,46 @@ para roboto negrita (Titulos):
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+.name{
+    font-family: 'Roboto';
+    font-weight: 700;
+    margin-top: 10px;
+
+}
+/* se le da formato al nombre usuario */
+.name h5 span{
+    background: var(--verde-fuerte);
+    color: #fff;
+    border-radius: 20px;
+    text-align: center;
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+    box-shadow: 0 0 6px 0 rgb(0,0,0, .5);
+    margin-right: 7px;
+    font-size: 10px;
+
+}
+
+
+
+
+.boton{
+    width: 200px;
+    background-color: var(--verde-fuerte);
+    border-radius: 25px;
+    color: white;
+    font-size: 15px;
+    display: block;
+    text-align: center;
+    padding: 10px 11px;
+    margin: 0 auto;
+}
+
+.botton{
+    text-align: center; /* se centra el boton*/
+}
+
 /*--------------------------termina C O N T A C T O -----------*/
 
