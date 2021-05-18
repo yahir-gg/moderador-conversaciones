@@ -1,7 +1,10 @@
+from typing import runtime_checkable
 from flask import Flask, render_template
 import modulo1 
 
 res = modulo1.iniciar()
+import conversacion   #asi se llama el archivo python
+res1 = conversacion.archivo()
 # objeto apara crear rutas
 app = Flask(__name__)
 
@@ -30,6 +33,15 @@ def cargar():
 def filtro_msj_agr():
     return render_template('filtro-msj-agr.html',resModulo1=res)
 
+@app.route('/mensajes_agresivos')
+def chat():
+    return render_template('mensajes_agresivos.html',resarchivo=res1)
+
+    #return emoji_pattern.sub(r'', mensajes)
+
+
+
+
 # ctrl+shift+r para recargar sin cache
 if __name__ == '__main__':
-    app.run(debug=True)
+   app.run(debug=True)
