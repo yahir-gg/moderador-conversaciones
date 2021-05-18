@@ -10,10 +10,21 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
+@app.route('/eleccion')
+def eleccion():
+    return render_template('eleccion_usuarios.html')
+
 @app.route('/contacto')
 def contacto():
     return render_template('contacto.html')
+  
+@app.route('/chat')
+def chat():
+    return render_template('chat.html')
 
+@app.route('/cargar')
+def cargar():
+    return render_template('cargar.html')
 
 
 @app.route('/mensajes_agresivos')
