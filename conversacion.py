@@ -8,13 +8,14 @@ def archivo():
         mensajes = []# es una lista 
       
     for i in datos['messages']: #recorre la lista con la varible datos y la va almacenando en i
-             mensajes.append(i) #append es para colocar los elementos en la lista 
-    for i in mensajes:#vuelve a recorrer la lista para imprimir los valores
-                print(i['from'])
-               
-                print(i['date'])
-                print(i['text'])
-                print("")
-    
+        mensajes.append(i) #append es para colocar los elementos en la lista 
+    # vuelve a recorrer la lista para imprimir los valores
+    for i in mensajes:
+        if i['type'] == 'message':
+            print(i['from'])
+            print(i['date'])
+            print(i['text'])
+            print("")
+        
     return mensajes
     

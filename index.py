@@ -33,8 +33,8 @@ def cargar():
 def filtro_msj_agr():
     return render_template('filtro-msj-agr.html',resModulo1=res)
 
-@app.route('/mensajes_agresivos')
-def chat():
+@app.route('/simulacion-chat')
+def simulacion_chat():
     return render_template('mensajes_agresivos.html',resarchivo=res1)
 
     #return emoji_pattern.sub(r'', mensajes)
