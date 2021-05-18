@@ -1,12 +1,18 @@
 from typing import runtime_checkable
 from flask import Flask, render_template
 import modulo1 
+import os
+from flask import Flask, render_template, request
+from werkzeug.utils import secure_filename
+
 
 res = modulo1.iniciar()
 import conversacion   #asi se llama el archivo python
 res1 = conversacion.archivo()
 # objeto apara crear rutas
 app = Flask(__name__)
+# Carpeta de subida
+app.config['UPLOAD_FOLDER'] = "static/archivo"
 
 # / es pagina principal
 @app.route('/')
@@ -25,6 +31,7 @@ def contacto():
 def chat():
     return render_template('chat.html')
 
+#pagina cargar archivo
 @app.route('/cargar')
 def cargar():
     return render_template('cargar.html')
@@ -41,6 +48,16 @@ def chat():
 
 
 
+@app.route("/uploader", methods=['POST'])
+def uploader():
+    if request.method == "POST":
+        # obtenemos el archivo del input "archivo"
+        f = request.files['archivo']
+        filename = secure_filename(f.filename)
+        # Guardamos el archivo en el directorio "Archivos"
+        f.save(os.path.join(app.config['UPLOAD_FOLDER'],filename))
+        msg='se subio el archivo correctamente'
+        return render_template ('cargar.html',msg=msg)
 
 # ctrl+shift+r para recargar sin cache
 if __name__ == '__main__':
