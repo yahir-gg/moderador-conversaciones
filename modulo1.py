@@ -81,7 +81,7 @@ def iniciar():
     # print(df.head(15))
 
     # Opening JSON file
-    f = open('C:/Users/kenyg/developer/proyecto-lt4/moderador/static/files/conversation001.json', encoding="utf8")
+    f = open('C:/Users/kenyg/developer/proyecto-lt4/moderador/static/archivos/conversation001.json', encoding="utf8")
 
     # returns JSON object as
     # a dictionary
