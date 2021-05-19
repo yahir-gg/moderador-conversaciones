@@ -304,3 +304,42 @@ html, body{
     position:absolute;
 }
 /*--------------------------termina C A R G A R / A R C H I V O-----------*/
+
+/*-------------------empieza BLOQUEA MENSAJES-------------------*/
+.container-bloqueo{
+    padding: 30px;
+    margin: 15px 100px 15px 100px;
+}
+
+.foto-user{
+    width: 60px;
+    height: 60px;
+    float: left;
+}
+
+.msj{
+    padding-left: 110px;
+    margin-top: 40px;
+    font-size: 20px;
+    margin-bottom: 0px;
+    padding: 10px 5px 5px 100px;
+}
+
+.button-noAgresivo{
+    padding-top: 30px;
+    align-items: center;
+    justify-content: center
+}
+
+.button-bloquea{
+    width: 200px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border-radius: 60px;
+    color: #fff;
+    background-color: #022422;
+    border-color: #022422;
+    font-size: 30px;
+    text-align: center;
+}
+/*-------------------termina BLOQUEA MENSAJES-------------------*/
