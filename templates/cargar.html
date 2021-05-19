@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}">
-    <title>Chat</title>
+    <title>Contacto</title>
 </head>
 <body>
-     <!--Empieza barra de navegación (navbar)-->
-     <header>
+    <!--Empieza barra de navegación (navbar)-->
+    <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#">Inicio</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,34 +34,34 @@
           </nav>
     </header>
     <!--Termina barra de navegación (navbar)-->
-    <!--Empieza seccion de contacto-->
-    <main class="contacto">
-        <h2 class="title">Simulaci&oacute;n de chat </h2>
-        <!--container es la caja general-->
-        <div class="container">
-             {%for elem in resarchivo%}
-              <div class="conversation">
-                <br>
-                <div class="name"><h5><span>  Us</span>{{elem.from}} </h5></div>
-                
-                <div class="fecha">{{elem.date}}</div>
-                <div class="texto">{{elem.text}}</div> 
-                 
-          
-        </div>
-            <!--superior es la caja que guarda los users de arriba-->
-           
-                <!--caja que lleva la imagen, nombre y correo-->
-                 
-               
-               {%endfor%}
-               <br>
-               <section class="botton">      
-               <a href="#"  class="boton">Filtrar mensajes  agresivos</a></section>
-              </main>
+    <!--Empieza seccion de cargar archivo-->
+    <!--container es la caja de Instrucciones-->
+    <div class="instru">
+        <h2>INSTRUCCIONES</h2>
+        <h5>1. Seleccione su archivo<br>
+            2. Click en cargar archivo<br>
+            3. Click en continuar</h5>
+            <br>
+         <p>Las conversaciones analizadas no 
+            son almacenadas en nuestros servidores, 
+            simplemente se analizan y una vez calculados 
+            los resultados, estas son eliminadas.
+        </p>
+    </div>
+    <!--Termina container es la caja de Instrucciones-->
+    <!--superior es la caja que contiene el cargar achivo de conversacion-->
+    <div class="archivo">
+        <h2>Cargar archivo de conversación:</h2>
+        <h3> NOTA:</h3><p>Solo se admiten archivos con formato JSON</p>
+        
+        <form action="/uploader" method="POST" enctype="multipart/form-data">
+            <input type="file" name="archivo">
+            <br><br>
+            <input type="submit"value="Cargar archivo">
+            <div class="msg">{{ msg }}</div>
+         </form>
+             <div class="continuar"> 
+                <p>Continuar</p>
             </div>
-              <br>
-           
-</body>
-</html>
-    
+    </div>
+    <!--Termina container es la caja que contiene el cargar achivo de conversacion -->

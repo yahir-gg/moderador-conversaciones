@@ -12,7 +12,7 @@ res1 = conversacion.archivo()
 # objeto apara crear rutas
 app = Flask(__name__)
 # Carpeta de subida
-app.config['UPLOAD_FOLDER'] = "static/archivo"
+app.config['UPLOAD_FOLDER'] = "static/archivos"
 
 # / es pagina principal
 @app.route('/')
