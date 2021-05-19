@@ -4,6 +4,9 @@ import modulo1
 import os
 from flask import Flask, render_template, request
 from werkzeug.utils import secure_filename
+import modulo2
+
+res2 = modulo2.iniciar()
 
 
 res = modulo1.iniciar()
@@ -35,6 +38,10 @@ def chat():
 @app.route('/cargar')
 def cargar():
     return render_template('cargar.html')
+    
+@app.route('/bloqueaMsj')
+def bloquea():
+    return render_template('bloqueaMsj.html', resModulo2=res)
 
 @app.route('/mensajes-agresivos')
 def filtro_msj_agr():
