@@ -20,38 +20,47 @@ app.config['UPLOAD_FOLDER'] = "static/archivos"
 @app.route('/')
 def index():
     return render_template('index.html')
+
 # eleccion de usuario
 @app.route('/eleccion')
 def eleccion():
     return render_template('eleccion_usuarios.html')
+
 # pagina cargar archivo de redes sociales
 @app.route('/cargar-rs')
 def cargar_rs():
     return render_template('cargar-rs.html')
+
 # pagina cargar archivo de grupo vulnerable
 @app.route('/cargar-gv')
 def cargar_gv():
     return render_template('cargar-gv.html')
+
 # pagina cargar archivo de academico
 @app.route('/cargar-ac')
 def cargar_ac():
     return render_template('cargar-ac.html')
+
 # simulacion de chat
 @app.route('/simulacion-chat')
 def simulacion_chat():
     return render_template('simulacion-chat.html',resarchivo=res)
+
 # muestra mensajes agresivos
 @app.route('/mensajes-agresivos')
 def filtro_msj_agr():
     return render_template('filtro-msj-agr.html',resModulo1=res)
+
 # bloquea mensajes agresivos
 @app.route('/bloqueaMsj')
 def bloquea():
-    return render_template('bloqueaMsj.html', resModulo2=res2)
+    return render_template('bloqueaMsj.html', resModulo2=res)
+
 # pagina de contacto
 @app.route('/contacto')
 def contacto():
     return render_template('contacto.html')
+    
 # cargar archivo a server
 @app.route("/uploader", methods=['POST'])
 def uploader():

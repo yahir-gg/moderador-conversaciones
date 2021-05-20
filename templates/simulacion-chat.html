@@ -12,22 +12,22 @@
      <!--Empieza barra de navegación (navbar)-->
      <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">Inicio</a>
+            <a class="navbar-brand" href="/">Inicio</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="#">Analizar <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="eleccion">Analizar <span class="sr-only">(current)</span></a>
                 </li>
               </ul>
               <ul class="navbar-nav mr-auto right">
                 <li class="nav-item active">
-                  <a class="nav-link" href="#">Acerca <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="acerca">Acerca <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                  <a class="nav-link" href="#">Contacto <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="contacto">Contacto <span class="sr-only">(current)</span></a>
                 </li>
               </ul>
             </div>
@@ -35,9 +35,9 @@
     </header>
     <!--Termina barra de navegación (navbar)-->
     <!--Empieza seccion de simular chat-->
-    <main>
-      <h2 class="title">Mensajes</h2>
-            <div class="mensajes-agresivos"> 
+    <main class="main">
+      <h2 class="title">Simulación de chat</h2>
+            <div class="container-mensajes"> 
                 {%for elem in resarchivo[2]%}
                     <div class="mensaje">
                       <figure class="picture">
@@ -58,7 +58,9 @@
                 {%endfor%}
                 
             </div>
-            <div class="boton"><a href="mensajes-agresivos">Filtrar Mensajes agresivos</a></div>
+            <div class="boton fm">
+              <a href="mensajes-agresivos">Filtrar Mensajes agresivos</a>
+            </div>
     </main>    
 </body>
 </html>

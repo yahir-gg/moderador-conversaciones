@@ -15,7 +15,7 @@ nltk.download('stopwords')
 nltk.download('wordnet')
 
 def iniciar():
-    train = pd.read_csv('C:/Users/kenyg/developer/proyecto-lt4/moderador/static/files/train_aggressiveness.csv', encoding = 'utf-8')
+    train = pd.read_csv('C:/Users/kenyg/developer/proyecto-lt4/moderador/static/archivos/train_aggressiveness.csv', encoding = 'utf-8')
     df = train.copy()
     # df.head()
 

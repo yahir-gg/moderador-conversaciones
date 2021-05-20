@@ -13,6 +13,7 @@
     padding: 0;
     font-family: var(--fuente-principal);    
 }
+
 /*
 para roboto normal (Texto en general):
     font-family: var(--fuente-principal);
@@ -93,19 +94,30 @@ para roboto negrita (Titulos):
 
 }
 
-
-
-
 .boton{
-    width: 200px;
+    width: 180px;
+    height: 45px;
     background-color: var(--verde-fuerte);
-    border-radius: 25px;
+    border-radius: 50px;
     color: white;
     font-size: 15px;
     display: block;
     text-align: center;
     padding: 10px 11px;
     margin: 0 auto;
+}
+.boton.fm{
+    padding: 5px;
+    height: 55px;
+}
+.boton.fm a{
+    font-size: 18px;
+}
+.boton a{
+    line-height: 23px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 25px;
 }
 
 .botton{
@@ -114,9 +126,10 @@ para roboto negrita (Titulos):
 
 /*--------------------------termina C O N T A C T O -----------*/
 /*--------------------------empieza M E N S A J E S   A G R E S I V O S -----------*/
-.mensajes-agresivos{
+.container-mensajes{
     width: 900px;
     margin: auto;
+    margin-bottom: 30px;
 }
 .mensaje{
     display: flex;
@@ -189,7 +202,7 @@ para roboto negrita (Titulos):
   height: 90.2vh;
   display: inline-block;
 }
-
+/*
 .boton{
   padding: 4px 50px;
   background: var(--verde-fuerte);
@@ -197,13 +210,14 @@ para roboto negrita (Titulos):
   border: 0;
   font-size: 30px;
   text-decoration: none;
-}
+}*/
 
 /*-----------------empieza ELLECION DE USUARIOS------*/
+/*
 html, body{
   height: 100%;
 }
-
+*/
 .contenedor{
   margin: 20px;
   padding: 0;
@@ -292,6 +306,7 @@ html, body{
     width:600px;/*anchura del elemto*/
     height:380px;/*altura del elemento*/ 
 }
+/*
 .continuar{
     border-radius: 15px;
     width: 100px;
@@ -303,6 +318,7 @@ html, body{
     top:300px;
     position:absolute;
 }
+*/
 /*--------------------------termina C A R G A R / A R C H I V O-----------*/
 
 /*-------------------empieza BLOQUEA MENSAJES-------------------*/
@@ -343,3 +359,7 @@ html, body{
     text-align: center;
 }
 /*-------------------termina BLOQUEA MENSAJES-------------------*/
+.main{
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
