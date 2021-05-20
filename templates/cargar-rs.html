@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}">
-    <title>Filtro de mensajes agresivos</title>
+    <title>Contacto</title>
 </head>
 <body>
+    <!--Empieza barra de navegación (navbar)-->
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#">Inicio</a>
@@ -26,37 +27,41 @@
                   <a class="nav-link" href="#">Acerca <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                  <a class="nav-link" href="{{url_for('contacto')}}">Contacto <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="#">Contacto <span class="sr-only">(current)</span></a>
                 </li>
               </ul>
             </div>
           </nav>
     </header>
-    <main>
-        <h2 class="title">Mensajes</h2>
-            <div class="mensajes-agresivos"> 
-                {%for elem in resModulo1[0]%}
-                    <div class="mensaje">
-                      <figure class="picture">
-                        {% if resModulo1[1].index(elem['from']) % 2 == 0 %}
-                          <div class="circle verde-oscuro" style="background-color: #022422;">
-                        {% else %}
-                          <div class="circle verde-claro" style="background-color: #E8FFE6;">
-                          
-                        {% endif %}
-                            <span class="inicial">{{elem['from'][0]}}</span>
-                          </div>
-                      </figure>
-                      <div class="message-body">
-                        <div class="user">{{elem['from']}}</div>
-                        <div class="message">{{elem['text']}}</div>
-                      </div>
-                    </div>
-                {%endfor%}
-                
+    <!--Termina barra de navegación (navbar)-->
+    <!--Empieza seccion de cargar archivo-->
+    <!--container es la caja de Instrucciones-->
+    <div class="instru">
+        <h2>INSTRUCCIONES</h2>
+        <h5>1. Seleccione su archivo<br>
+            2. Click en cargar archivo<br>
+            3. Click en continuar</h5>
+            <br>
+         <p>Las conversaciones analizadas no 
+            son almacenadas en nuestros servidores, 
+            simplemente se analizan y una vez calculados 
+            los resultados, estas son eliminadas.
+        </p>
+    </div>
+    <!--Termina container es la caja de Instrucciones-->
+    <!--superior es la caja que contiene el cargar achivo de conversacion-->
+    <div class="archivo">
+        <h2>Cargar archivo de conversación:</h2>
+        <h3> NOTA:</h3><p>Solo se admiten archivos con formato JSON</p>
+        
+        <form action="/uploader" method="POST" enctype="multipart/form-data">
+            <input type="file" name="archivo">
+            <br><br>
+            <input type="submit"value="Cargar archivo">
+            <div class="msg">{{ msg }}</div>
+         </form>
+             <div class="continuar"> 
+                <a href="simulacion-chat"><p>Continuar</p></a>
             </div>
-            <div class="boton"><a href="bloqueaMsj">Filtrar Mensajes agresivos</a></div>
-
-    </main>
-</body>
-</html>
+    </div>
+    <!--Termina container es la caja que contiene el cargar achivo de conversacion -->

@@ -82,7 +82,7 @@ def iniciar():
 
     # Opening JSON file
     f = open('C:/Users/kenyg/developer/proyecto-lt4/moderador/static/archivos/conversation001.json', encoding="utf8")
-
+    
     # returns JSON object as
     # a dictionary
     data = json.load(f)
@@ -127,7 +127,7 @@ def iniciar():
 
     determinantes = []
     mensajes_agresivos = []
-    
+    mensajes_no_agresivos = []
 
 
     for elem in mensajes:
@@ -135,6 +135,8 @@ def iniciar():
         determinante = model.predict(vect.transform([aux]))
         if determinante == 1:
             mensajes_agresivos.append(elem)
+        elif determinante == 0:
+            mensajes_no_agresivos.append(elem)
         determinantes.append(determinante)
     print('dt:',determinantes)
     contador = 0
@@ -150,4 +152,4 @@ def iniciar():
 
     with open('text_classifier', 'wb') as picklefile:
         pickle.dump(model,picklefile)
-    return mensajes_agresivos, conv_users
+    return mensajes_agresivos, conv_users, mensajes, mensajes_no_agresivos

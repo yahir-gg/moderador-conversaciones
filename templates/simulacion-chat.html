@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}">
-    <title>Filtro de mensajes agresivos</title>
+    <title>Chat</title>
 </head>
 <body>
-    <header>
+     <!--Empieza barra de navegación (navbar)-->
+     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#">Inicio</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,19 +27,21 @@
                   <a class="nav-link" href="#">Acerca <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                  <a class="nav-link" href="{{url_for('contacto')}}">Contacto <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="#">Contacto <span class="sr-only">(current)</span></a>
                 </li>
               </ul>
             </div>
           </nav>
     </header>
+    <!--Termina barra de navegación (navbar)-->
+    <!--Empieza seccion de simular chat-->
     <main>
-        <h2 class="title">Mensajes</h2>
+      <h2 class="title">Mensajes</h2>
             <div class="mensajes-agresivos"> 
-                {%for elem in resModulo1[0]%}
+                {%for elem in resarchivo[2]%}
                     <div class="mensaje">
                       <figure class="picture">
-                        {% if resModulo1[1].index(elem['from']) % 2 == 0 %}
+                        {% if resarchivo[1].index(elem['from']) % 2 == 0 %}
                           <div class="circle verde-oscuro" style="background-color: #022422;">
                         {% else %}
                           <div class="circle verde-claro" style="background-color: #E8FFE6;">
@@ -55,8 +58,8 @@
                 {%endfor%}
                 
             </div>
-            <div class="boton"><a href="bloqueaMsj">Filtrar Mensajes agresivos</a></div>
-
-    </main>
+            <div class="boton"><a href="mensajes-agresivos">Filtrar Mensajes agresivos</a></div>
+    </main>    
 </body>
 </html>
+    

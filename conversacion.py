@@ -2,7 +2,7 @@ import json
 
 
 def archivo():
-    ruta = ('C:/Users/kenyg/developer/proyecto-lt4/moderador/static/files/conversation001.json')
+    ruta = ('C:/Users/kenyg/developer/proyecto-lt4/moderador/static/archivos/conversation001.json')
     with open(ruta, encoding="utf-8") as contenido:
         datos = json.load(contenido)#carga los archivos json
         mensajes = []# es una lista 
