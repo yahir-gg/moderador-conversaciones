@@ -37,11 +37,12 @@
     <!--Empieza seccion de simular chat-->
     <main class="main">
       <h2 class="title">Simulación de chat</h2>
-            <div class="container-mensajes"> 
-                {%for elem in resarchivo[2]%}
+            <div class="container-mensajes">
+              {%for e in resarchivo:%}
+                {%for elem in e[2]%}
                     <div class="mensaje">
                       <figure class="picture">
-                        {% if resarchivo[1].index(elem['from']) % 2 == 0 %}
+                        {% if e[1].index(elem['from']) % 2 == 0 %}
                           <div class="circle verde-oscuro" style="background-color: #022422;">
                         {% else %}
                           <div class="circle verde-claro" style="background-color: #E8FFE6;">
@@ -56,6 +57,7 @@
                       </div>
                     </div>
                 {%endfor%}
+              {%endfor%}
                 
             </div>
             <div class="boton fm">

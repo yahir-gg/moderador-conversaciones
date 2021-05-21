@@ -5,16 +5,13 @@ import os
 import modulo1 
 import modulo2
 import conversacion  
-
-res = modulo1.iniciar()
+res = []
+print('arca',hex(id(res)))
 res1 = conversacion.archivo()
 res2 = modulo2.iniciar()
 
 # objeto apara crear rutas
 app = Flask(__name__)
-
-# Carpeta de subida
-app.config['UPLOAD_FOLDER'] = "static/archivos"
 
 # / es pagina principal
 @app.route('/')
@@ -61,6 +58,9 @@ def bloquea():
 def contacto():
     return render_template('contacto.html')
     
+# Carpeta de subida
+app.config['UPLOAD_FOLDER'] = "static/archivos"
+
 # cargar archivo a server
 @app.route("/uploader", methods=['POST'])
 def uploader():
@@ -69,8 +69,13 @@ def uploader():
         f = request.files['archivo']
         filename = secure_filename(f.filename)
         # Guardamos el archivo en el directorio "Archivos"
-        f.save(os.path.join(app.config['UPLOAD_FOLDER'],filename))
+        f.save(os.path.join(app.config['UPLOAD_FOLDER'],'archivo.json'))
         msg='se subio el archivo correctamente'
+        res.append(modulo1.iniciar())
+        for elem in res:
+            print(elem)
+        print('yomo',hex(id(res)))
+
         return render_template ('cargar-rs.html',msg=msg)
 
 # ctrl+shift+r para recargar sin cache

@@ -15,7 +15,7 @@ nltk.download('stopwords')
 nltk.download('wordnet')
 
 def iniciar():
-    train = pd.read_csv('C:/Users/kenyg/developer/proyecto-lt4/moderador/static/archivos/train_aggressiveness.csv', encoding = 'utf-8')
+    train = pd.read_csv('./static/archivos/train_aggressiveness.csv', encoding = 'utf-8')
     df = train.copy()
     # df.head()
 
@@ -81,36 +81,39 @@ def iniciar():
     # print(df.head(15))
 
     # Opening JSON file
-    f = open('C:/Users/kenyg/developer/proyecto-lt4/moderador/static/archivos/conversation001.json', encoding="utf8")
-    
-    # returns JSON object as
-    # a dictionary
-    data = json.load(f)
-
-    # Iterating through the json
-    # list
     mensajes=[]
-    for i in data['messages']:
-        # print(i['text'])
-        mensajes.append(i)
-
-    
-        
-    # print(len(mensajes))
-    cont = 0
-    # print(mensajes)
-    
-    for i in mensajes:
-        if i['text'] == "":
-            mensajes.pop(cont)
-        cont += 1
     conv_users = []
-    for elem in mensajes:
-        if elem['type'] == 'message':
-            if elem['from'] not in conv_users:
-                conv_users.append(elem['from'])
+    try:
+        f = open('./static/archivos/archivo.json', encoding="utf8")
+        
+        # returns JSON object as
+        # a dictionary
+        data = json.load(f)
 
-    f.close()
+        # Iterating through the json
+        # list
+        for i in data['messages']:
+            # print(i['text'])
+            mensajes.append(i)
+
+        
+            
+        # print(len(mensajes))
+        cont = 0
+        # print(mensajes)
+        
+        for i in mensajes:
+            if i['text'] == "":
+                mensajes.pop(cont)
+            cont += 1
+        for elem in mensajes:
+            if elem['type'] == 'message':
+                if elem['from'] not in conv_users:
+                    conv_users.append(elem['from'])
+
+        f.close()
+    except:
+        print('errorXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 
     """mensajes_nolist=[]
     # print("imp\n", mensajes)
