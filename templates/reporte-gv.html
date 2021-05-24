@@ -6,10 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}">
-    <title>Contacto</title>
+    <title>Reporte de agresión</title>
 </head>
 <body>
-    <!--Empieza barra de navegación (navbar)-->
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="/">Inicio</a>
@@ -27,42 +26,32 @@
                   <a class="nav-link" href="acerca">Acerca <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                  <a class="nav-link" href="contacto">Contacto <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="{{url_for('contacto')}}">Contacto <span class="sr-only">(current)</span></a>
                 </li>
               </ul>
             </div>
           </nav>
     </header>
-    <!--Termina barra de navegación (navbar)-->
-    <!--Empieza seccion de cargar archivo-->
-    <!--container es la caja de Instrucciones-->
-    <div class="instru">
-        <h2>INSTRUCCIONES</h2>
-        <h5>1. Seleccione su archivo<br>
-            2. Click en cargar archivo<br>
-            3. Click en continuar</h5>
-            <br>
-         <p>Las conversaciones analizadas no 
-            son almacenadas en nuestros servidores, 
-            simplemente se analizan y una vez calculados 
-            los resultados, estas son eliminadas.
-        </p>
-    </div>
-    <!--Termina container es la caja de Instrucciones-->
-    <!--superior es la caja que contiene el cargar achivo de conversacion-->
-    <div class="archivo">
-        <h2>Cargar archivo de conversación:</h2>
-        <h3> NOTA:</h3><p>Solo se admiten archivos con formato JSON</p>
-        
-        <form action="/uploader" method="POST" enctype="multipart/form-data">
-            <input type="file" name="archivo">
-            <br><br>
-            <input type="submit"value="Cargar archivo">
-            <input type="hidden"value="gv" id="tipo" name="tipo">
-            <div class="msg">{{ msg }}</div>
-         </form>
-             <div class="continuar"> 
-                <a href="mensajes-agresivos"><p>Continuar</p></a>
+    <main>
+        <h2 class="title">Reporte de agresiones</h2>
+            <div class="container-mensajes">
+                <span>Usuarios con mensajes agresivos:</span> 
+                {%for e in data:%}
+                  <ul>
+                    {%for elem in e[4]:%}
+                    <span>{{elem.nombre}}</span><br>
+                      {%for r in e[0]:%}
+                        {%if r['from'] == elem.nombre%}
+                          <span>{{r['text']}}</span><br>
+                        {%endif%}
+                        
+                      {%endfor%}
+                    {%endfor%}
+                  </ul>
+                {%endfor%}
             </div>
-    </div>
-    <!--Termina container es la caja que contiene el cargar achivo de conversacion -->
+            <div class="boton fm"><a href="bloqueaMsj">Bloquear mensajes agresivos</a></div>
+
+    </main>
+</body>
+</html>

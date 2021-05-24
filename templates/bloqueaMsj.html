@@ -43,10 +43,11 @@
   <main class="bloqueo">
     <h2 class="title">Conversación sin agresividad</h2>
     <div class="container-mensajes"> 
-      {%for elem in resModulo2[3]%}
+      {%for e in resModulo2:%}
+      {%for elem in e[3]%}
           <div class="mensaje">
             <figure class="picture">
-              {% if resModulo2[1].index(elem['from']) % 2 == 0 %}
+              {% if e[1].index(elem['from']) % 2 == 0 %}
                 <div class="circle verde-oscuro" style="background-color: #022422;">
               {% else %}
                 <div class="circle verde-claro" style="background-color: #E8FFE6;">
@@ -61,6 +62,8 @@
             </div>
           </div>
       {%endfor%}
+      {%endfor%}
+
       
       <div class="button-noAgresivo">
         <button class="button-bloquea" onclick="location.href='/'">Inicio</button>
