@@ -1,13 +1,14 @@
 from typing import runtime_checkable
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, url_for
 from werkzeug.utils import secure_filename
 import os
 import modulo1 
 import modulo2
+import modulo3
 import conversacion  
 res = []
-print('arca',hex(id(res)))
-res1 = conversacion.archivo()
+# print('arca',hex(id(res)))
+# res1 = conversacion.archivo()
 res2 = modulo2.iniciar()
 
 # objeto apara crear rutas
@@ -53,6 +54,11 @@ def filtro_msj_agr():
 def bloquea():
     return render_template('bloqueaMsj.html', resModulo2=res)
 
+# reporte de agresion gv
+@app.route('/reporte-gv')
+def make_reportGV():
+    return render_template('reporte-gv.html',data=res)
+
 # pagina de contacto
 @app.route('/contacto')
 def contacto():
@@ -62,9 +68,10 @@ def contacto():
 app.config['UPLOAD_FOLDER'] = "static/archivos"
 
 # cargar archivo a server
-@app.route("/uploader", methods=['POST'])
+@app.route("/uploader", methods=['POST','GET'])
 def uploader():
     if request.method == "POST":
+        tipo = request.form['tipo']
         # obtenemos el archivo del input "archivo"
         f = request.files['archivo']
         filename = secure_filename(f.filename)
@@ -74,9 +81,12 @@ def uploader():
         res.append(modulo1.iniciar())
         for elem in res:
             print(elem)
-        print('yomo',hex(id(res)))
-
-        return render_template ('cargar-rs.html',msg=msg)
+        if tipo == 'rs':
+            return render_template ('cargar-rs.html',msg=msg)
+        elif tipo == 'gv':
+            return render_template('cargar-gv.html',msg=msg)
+        elif tipo == 'ac':
+            return render_template('cargar-ac.html',msg=msg)
 
 # ctrl+shift+r para recargar sin cache
 if __name__ == '__main__':

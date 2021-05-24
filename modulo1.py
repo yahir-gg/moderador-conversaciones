@@ -13,8 +13,9 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn.metrics import classification_report
 nltk.download('stopwords')
 nltk.download('wordnet')
-
 def iniciar():
+    
+
     train = pd.read_csv('./static/archivos/train_aggressiveness.csv', encoding = 'utf-8')
     df = train.copy()
     # df.head()
@@ -77,7 +78,11 @@ def iniciar():
     # print(df["prediccion"])
 
     df['Determinante'] = df['prediccion'].apply(lambda prediccion:'No agresivo' if prediccion ==0 else 'Agresivo')
-
+    with open('text_classifier', 'wb') as picklefile:
+        pickle.dump(model,picklefile)
+    
+    #with open('text_classifier', 'rb') as training_model:
+    #    model = pickle.load(training_model)
     # print(df.head(15))
 
     # Opening JSON file
@@ -152,7 +157,45 @@ def iniciar():
             print('El mensaje ',contador,' es ',tipo)
         contador = contador + 1"""
 
+    class Objeto:
+        nombre = ""
+        cantidad = 0
+        # msj_agr = []
+    
+    usuarios_agresivos=[]
+    # recorremos la lista de mensajes agresivos
+    for e in mensajes_agresivos:
+        # verificamos que no se repitan los nombres
+        if e['from'] not in usuarios_agresivos:
+        # se agrega el user a la lista
+            usuarios_agresivos.append(e['from'])
 
-    with open('text_classifier', 'wb') as picklefile:
-        pickle.dump(model,picklefile)
-    return mensajes_agresivos, conv_users, mensajes, mensajes_no_agresivos
+    print(usuarios_agresivos)
+    users = []
+    # recorremos la lista de user agresivos
+    for e in usuarios_agresivos:
+        # se crea objeto
+        o = Objeto()
+        # asignacion de nombre
+        o.nombre = str(e)
+        # cantidad por default se pone en 0
+        # el objeto se añade a la lista users
+        users.append(o)
+        print('Objeto ',e, 'creado')
+    
+    cont = 0
+    # recorremos la lista de msj agresivos
+    for d in mensajes_agresivos:
+        # recorremos la lista de objetos
+        for h in users:
+        # verificamos si el usuario agresivo tiene un objeto creado
+            if d['from'] == h.nombre:
+                # se aumenta en uno la cantidad de msj agr
+                h.cantidad+=1
+        
+    print('Users')
+    # recorremos la lista de objetos
+    for h in users:
+        print('User: ',h.nombre,' Num.MsjAgr: ',h.cantidad)
+
+    return mensajes_agresivos, conv_users, mensajes, mensajes_no_agresivos, users

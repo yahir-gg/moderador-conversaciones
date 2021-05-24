@@ -1,4 +1,4 @@
-import json
+"""import json
 
 
 def archivo():
@@ -17,5 +17,5 @@ def archivo():
             print(i['text'])
             print("")
         
-    return mensajes
+    return mensajes"""
     
