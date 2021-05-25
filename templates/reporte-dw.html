@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}">
+    <title>Reporte</title>
+</head>
+<body>
+    <main class="template_report">
+        <div class="logos">
+            <figure id="logo_uam">
+                <img src="https://lh3.googleusercontent.com/proxy/aG-ijP_iGnKFklxBABv_xPaE5yFLgvBoqJb90FYhQHnBEXpUF7h4QUGXSb5lFFRUnp0sEDBnH7hT2iV5GlvHDssV9QKr38F3qCHeWANZn-a03wnPHd31x4qhr8c" alt="uam_logotipo">
+            </figure>
+            <figure id="logo_gu">
+                <img src="../static/media/logo_gu.PNG" alt="">
+            </figure>
+        </div>
+        <div class="reporte-cont">
+            <br>
+            <h2>Reporte de agresiones</h2>
+            <div class="container-mensajes">
+                <span>Usuarios con mensajes agresivos:</span> 
+                {%for e in data:%}
+                  <ul>
+                    {%for elem in e[4]:%}
+                    <span>Usuario: {{elem.nombre}}</span><br>
+                    <span>ID: {{elem.id}}</span><br>
+                    <span>Cantidad de mensajes agresivos: {{elem.cantidad}}</span><br>
+                    <span>Mensajes:</span><br>
+                      {%for r in e[0]:%}
+                        {%if r['from'] == elem.nombre%}
+                          <span> - {{r['text']}}</span><br>
+                        {%endif%}
+                      {%endfor%}
+                      <br>
+                    {%endfor%}
+                  </ul>
+                {%endfor%}
+            </div>
+        </div>
+    </main>
+    </body>
+</html>

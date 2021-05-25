@@ -59,6 +59,10 @@ def bloquea():
 def make_reportGV():
     return render_template('reporte-gv.html',data=res)
 
+@app.route('/reporte-dw')
+def make_reportDW():
+    return render_template('reporte-dw.html',data=res)
+
 # pagina de contacto
 @app.route('/contacto')
 def contacto():

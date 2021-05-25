@@ -363,3 +363,30 @@ html, body{
     margin-top: 30px;
     margin-bottom: 50px;
 }
+
+/*---------------PLANTILLA DE REPORTE*/
+.logos{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+}
+#logo_uam img{
+    width: 60%;
+}
+#logo_gu img{
+    width: 60%;
+}
+.template_report{
+    margin: auto;
+    width: 70%;
+    height: 70%;
+    border: #022422 1px solid;
+}
+.reporte-cont{
+    margin: auto;
+    width: 70%;
+    height: 100%;
+    border: #022422 1px solid;
+
+}

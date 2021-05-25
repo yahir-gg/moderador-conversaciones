@@ -159,6 +159,7 @@ def iniciar():
 
     class Objeto:
         nombre = ""
+        id = ""
         cantidad = 0
         # msj_agr = []
     
@@ -181,6 +182,10 @@ def iniciar():
         # cantidad por default se pone en 0
         # el objeto se añade a la lista users
         users.append(o)
+        for f in mensajes_agresivos:
+            if f['from'] == e:
+                o.id = f['from_id']
+                break
         print('Objeto ',e, 'creado')
     
     cont = 0
@@ -192,7 +197,7 @@ def iniciar():
             if d['from'] == h.nombre:
                 # se aumenta en uno la cantidad de msj agr
                 h.cantidad+=1
-        
+    
     print('Users')
     # recorremos la lista de objetos
     for h in users:

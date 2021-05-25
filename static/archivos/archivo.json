@@ -1,152 +1,605 @@
 {
- "name": "Tania",
- "type": "personal_chat",
- "id": 1559865863,
+ "name": "Grupo 5",
+ "type": "private_group",
+ "id": 438459750,
  "messages": [
   {
-   "id": 757,
+   "id": 869,
    "type": "service",
-   "date": "2021-04-28T19:48:15",
-   "actor": "Tania",
-   "actor_id": "user1559865863",
-   "action": "joined_telegram",
+   "date": "2021-05-24T18:07:07",
+   "actor": "Yahir 🙄",
+   "actor_id": "user1354139004",
+   "action": "create_group",
+   "title": "Grupo 5",
+   "members": [
+    "Yahir 🙄",
+    "Tania",
+    "Nadia",
+    "Melissa",
+    "Paola"
+   ],
    "text": ""
   },
   {
-   "id": 766,
+   "id": 871,
    "type": "message",
-   "date": "2021-05-04T14:08:43",
-   "from": "Yahir 🙄",
-   "from_id": "user1354139004",
-   "text": "Hola Tania, esto va a ser una prueba... Primero vamos a enviarnos mensajes positivos va?"
+   "date": "2021-05-24T18:08:00",
+   "from": "Paola",
+   "from_id": "user1882680745",
+   "text": "Hola chicos!"
   },
   {
-   "id": 767,
+   "id": 872,
    "type": "message",
-   "date": "2021-05-04T14:08:56",
+   "date": "2021-05-24T18:08:10",
+   "from": "Melissa",
+   "from_id": "user1854866053",
+   "text": "Hola vivian"
+  },
+  {
+   "id": 873,
+   "type": "message",
+   "date": "2021-05-24T18:08:21",
+   "from": "Nadia",
+   "from_id": "user1572147191",
+   "text": "Hola"
+  },
+  {
+   "id": 874,
+   "type": "message",
+   "date": "2021-05-24T18:08:36",
    "from": "Tania",
    "from_id": "user1559865863",
-   "text": "Ok"
+   "text": "Hola"
   },
   {
-   "id": 768,
+   "id": 875,
    "type": "message",
-   "date": "2021-05-04T14:09:03",
+   "date": "2021-05-24T18:08:46",
+   "from": "Paola",
+   "from_id": "user1882680745",
+   "text": "Como les va en este trimestre?"
+  },
+  {
+   "id": 876,
+   "type": "message",
+   "date": "2021-05-24T18:09:22",
    "from": "Tania",
    "from_id": "user1559865863",
-   "text": "Como te quiero"
+   "text": "De la verga.."
   },
   {
-   "id": 769,
+   "id": 877,
    "type": "message",
-   "date": "2021-05-04T14:09:17",
-   "from": "Yahir 🙄",
-   "from_id": "user1354139004",
-   "text": "Jaja ya vas a empezar de cursi"
+   "date": "2021-05-24T18:09:32",
+   "from": "Melissa",
+   "from_id": "user1854866053",
+   "text": "Mal , estoy hasta la madre de las clases en línea"
   },
   {
-   "id": 770,
+   "id": 878,
    "type": "message",
-   "date": "2021-05-04T14:09:30",
-   "from": "Yahir 🙄",
-   "from_id": "user1354139004",
-   "text": "Yo también te quiero"
+   "date": "2021-05-24T18:09:42",
+   "from": "Nadia",
+   "from_id": "user1572147191",
+   "text": "Como la mierda"
   },
   {
-   "id": 771,
+   "id": 879,
    "type": "message",
-   "date": "2021-05-04T14:09:39",
-   "from": "Yahir 🙄",
-   "from_id": "user1354139004",
-   "text": "Ahora mensajes negativos"
+   "date": "2021-05-24T18:10:19",
+   "from": "Melissa",
+   "from_id": "user1854866053",
+   "text": "Me estoy volviendo loca"
   },
   {
-   "id": 772,
+   "id": 880,
    "type": "message",
-   "date": "2021-05-04T14:09:49",
-   "from": "Yahir 🙄",
-   "from_id": "user1354139004",
-   "text": "Pero aveces me caes mal, aveces no te soporto..."
-  },
-  {
-   "id": 773,
-   "type": "message",
-   "date": "2021-05-04T14:10:28",
+   "date": "2021-05-24T18:10:27",
    "from": "Tania",
    "from_id": "user1559865863",
-   "text": "Estamos en la misma situación aveces eres muy fastidioso.."
+   "text": "Porque el puto de Yahir no contesta?"
   },
   {
-   "id": 774,
+   "id": 881,
    "type": "message",
-   "date": "2021-05-04T14:10:33",
+   "date": "2021-05-24T18:10:46",
+   "from": "Yahir 🙄",
+   "from_id": "user1354139004",
+   "text": "Vale verga, parece que a todos les va mal... No mamen, pues pónganse a estudiar"
+  },
+  {
+   "id": 882,
+   "type": "message",
+   "date": "2021-05-24T18:10:56",
+   "from": "Yahir 🙄",
+   "from_id": "user1354139004",
+   "text": "A mi me va super bien, soy un genio."
+  },
+  {
+   "id": 883,
+   "type": "message",
+   "date": "2021-05-24T18:11:05",
+   "from": "Yahir 🙄",
+   "from_id": "user1354139004",
+   "text": "Soy de lo mejor de este planeta"
+  },
+  {
+   "id": 884,
+   "type": "message",
+   "date": "2021-05-24T18:11:13",
+   "from": "Paola",
+   "from_id": "user1882680745",
+   "text": "Ya estoy hasta la madre de la pandemia"
+  },
+  {
+   "id": 885,
+   "type": "message",
+   "date": "2021-05-24T18:11:32",
+   "from": "Yahir 🙄",
+   "from_id": "user1354139004",
+   "reply_to_message_id": 880,
+   "text": "Mira quien habla... Te añadimos a un grupo de 3 y nunca contestaste..."
+  },
+  {
+   "id": 886,
+   "type": "message",
+   "date": "2021-05-24T18:12:16",
    "from": "Tania",
    "from_id": "user1559865863",
-   "text": "😡"
+   "text": "Te recuerdo que no tenía Internet cabron.."
   },
   {
-   "id": 775,
+   "id": 887,
    "type": "message",
-   "date": "2021-05-04T14:10:43",
+   "date": "2021-05-24T18:12:23",
    "from": "Yahir 🙄",
    "from_id": "user1354139004",
-   "text": "Sin emojis :/"
+   "text": "Hace un pinche perro calor... Eso si esta culero"
   },
   {
-   "id": 776,
+   "id": 888,
    "type": "message",
-   "date": "2021-05-04T14:10:53",
+   "date": "2021-05-24T18:12:23",
+   "from": "Melissa",
+   "from_id": "user1854866053",
+   "text": "Eso es cierto, me vi como tonta esperando el mensaje de tania"
+  },
+  {
+   "id": 889,
+   "type": "message",
+   "date": "2021-05-24T18:12:41",
    "from": "Yahir 🙄",
    "from_id": "user1354139004",
-   "text": "Dime algo muy negativo"
+   "reply_to_message_id": 886,
+   "text": "Pero si te veia en whatsapp"
   },
   {
-   "id": 777,
+   "id": 890,
    "type": "message",
-   "date": "2021-05-04T14:11:32",
+   "date": "2021-05-24T18:12:55",
    "from": "Yahir 🙄",
    "from_id": "user1354139004",
-   "text": "Ojalá que en el videojuego qué etas jugando se mueran todos, odio a todos tus personajes"
+   "text": "Para eso si tenias internet verdad?"
   },
   {
-   "id": 778,
+   "id": 891,
    "type": "message",
-   "date": "2021-05-04T14:12:13",
+   "date": "2021-05-24T18:12:57",
+   "from": "Yahir 🙄",
+   "from_id": "user1354139004",
+   "text": "Jaja"
+  },
+  {
+   "id": 892,
+   "type": "message",
+   "date": "2021-05-24T18:13:09",
+   "from": "Paola",
+   "from_id": "user1882680745",
+   "text": "Lo importante es que ya estamos reunidos"
+  },
+  {
+   "id": 893,
+   "type": "message",
+   "date": "2021-05-24T18:13:23",
+   "from": "Melissa",
+   "from_id": "user1854866053",
+   "text": "Yahir ya no pelees"
+  },
+  {
+   "id": 894,
+   "type": "message",
+   "date": "2021-05-24T18:13:44",
+   "from": "Nadia",
+   "from_id": "user1572147191",
+   "text": "Si ese es lo bueno todos juntos"
+  },
+  {
+   "id": 895,
+   "type": "message",
+   "date": "2021-05-24T18:13:56",
+   "from": "Yahir 🙄",
+   "from_id": "user1354139004",
+   "reply_to_message_id": 893,
+   "text": "No me digas que hacer :v"
+  },
+  {
+   "id": 896,
+   "type": "message",
+   "date": "2021-05-24T18:14:00",
    "from": "Tania",
    "from_id": "user1559865863",
-   "text": "Eres un grosero ya muerete"
+   "reply_to_message_id": 889,
+   "text": "Claro que no..\nNo hables tus mierdas.."
   },
   {
-   "id": 779,
+   "id": 897,
    "type": "message",
-   "date": "2021-05-04T14:12:24",
+   "date": "2021-05-24T18:14:21",
+   "from": "Melissa",
+   "from_id": "user1854866053",
+   "reply_to_message_id": 895,
+   "text": "Hieres mis sentimientos"
+  },
+  {
+   "id": 898,
+   "type": "message",
+   "date": "2021-05-24T18:14:26",
    "from": "Yahir 🙄",
    "from_id": "user1354139004",
-   "text": "Oye, viste lo del metro? Se cayó... Y murieron personas... Los que construyeron esa línea son unos pendejos"
+   "reply_to_message_id": 894,
+   "text": "Nadia no dice groserías... Es una santa o que?"
   },
   {
-   "id": 780,
+   "id": 899,
    "type": "message",
-   "date": "2021-05-04T14:12:59",
-   "from": "Tania",
-   "from_id": "user1559865863",
-   "text": "Son un par de corruptos y rateros se pasan de pendejos"
+   "date": "2021-05-24T18:14:32",
+   "from": "Nadia",
+   "from_id": "user1572147191",
+   "text": "Sip"
   },
   {
-   "id": 781,
+   "id": 900,
    "type": "message",
-   "date": "2021-05-04T14:13:32",
+   "date": "2021-05-24T18:14:37",
    "from": "Yahir 🙄",
    "from_id": "user1354139004",
-   "text": "Si jaja... Con esto ya es suficiente tania."
+   "text": "Insultame"
   },
   {
-   "id": 782,
+   "id": 901,
    "type": "message",
-   "date": "2021-05-04T14:13:34",
+   "date": "2021-05-24T18:14:45",
+   "from": "Yahir 🙄",
+   "from_id": "user1354139004",
+   "reply_to_message_id": 897,
+   "text": "Ni tienes jaja"
+  },
+  {
+   "id": 902,
+   "type": "message",
+   "date": "2021-05-24T18:15:05",
+   "from": "Paola",
+   "from_id": "user1882680745",
+   "reply_to_message_id": 901,
+   "text": "Jajaja eso si me dio risa"
+  },
+  {
+   "id": 903,
+   "type": "message",
+   "date": "2021-05-24T18:15:30",
+   "from": "Melissa",
+   "from_id": "user1854866053",
+   "reply_to_message_id": 901,
+   "text": "Claro que tengo"
+  },
+  {
+   "id": 904,
+   "type": "message",
+   "date": "2021-05-24T18:16:30",
+   "from": "Yahir 🙄",
+   "from_id": "user1354139004",
+   "reply_to_message_id": 902,
+   "text": "No es chiste..."
+  },
+  {
+   "id": 905,
+   "type": "message",
+   "date": "2021-05-24T18:16:36",
+   "from": "Yahir 🙄",
+   "from_id": "user1354139004",
+   "text": "No se que tiene de gracioso."
+  },
+  {
+   "id": 906,
+   "type": "message",
+   "date": "2021-05-24T18:16:49",
+   "from": "Yahir 🙄",
+   "from_id": "user1354139004",
+   "reply_to_message_id": 903,
+   "text": "Bueno, confiaré en ti palabra"
+  },
+  {
+   "id": 907,
+   "type": "message",
+   "date": "2021-05-24T18:17:52",
+   "from": "Yahir 🙄",
+   "from_id": "user1354139004",
+   "text": "Pero ya cálmese todas... Parecen locas"
+  },
+  {
+   "id": 908,
+   "type": "message",
+   "date": "2021-05-24T18:18:04",
+   "from": "Yahir 🙄",
+   "from_id": "user1354139004",
+   "text": "Vamos a calmarnos y enviarnos mensajes bonitos"
+  },
+  {
+   "id": 909,
+   "type": "message",
+   "date": "2021-05-24T18:18:08",
+   "from": "Paola",
+   "from_id": "user1882680745",
+   "reply_to_message_id": 907,
+   "text": "Te odio cuando estas de grosero"
+  },
+  {
+   "id": 910,
+   "type": "message",
+   "date": "2021-05-24T18:18:10",
+   "from": "Melissa",
+   "from_id": "user1854866053",
+   "text": "Okey"
+  },
+  {
+   "id": 911,
+   "type": "message",
+   "date": "2021-05-24T18:18:23",
+   "from": "Yahir 🙄",
+   "from_id": "user1354139004",
+   "reply_to_message_id": 909,
+   "text": "Que ya te calmessss jaja"
+  },
+  {
+   "id": 912,
+   "type": "message",
+   "date": "2021-05-24T18:18:27",
+   "from": "Melissa",
+   "from_id": "user1854866053",
+   "text": "Besos , besitos jaja"
+  },
+  {
+   "id": 913,
+   "type": "message",
+   "date": "2021-05-24T18:19:06",
+   "from": "Yahir 🙄",
+   "from_id": "user1354139004",
+   "reply_to_message_id": 912,
+   "text": "Exacto... Abrazos no balazos"
+  },
+  {
+   "id": 914,
+   "type": "message",
+   "date": "2021-05-24T18:19:07",
+   "from": "Paola",
+   "from_id": "user1882680745",
+   "text": "Aunque no le hable bien a todos ustedes, ya los extraño y extraño la universidad"
+  },
+  {
+   "id": 915,
+   "type": "message",
+   "date": "2021-05-24T18:19:20",
+   "from": "Nadia",
+   "from_id": "user1572147191",
+   "reply_to_message_id": 908,
+   "text": "Si wey"
+  },
+  {
+   "id": 916,
+   "type": "message",
+   "date": "2021-05-24T18:19:29",
    "from": "Tania",
    "from_id": "user1559865863",
-   "text": "Ojalá se mueran los desgraciados.."
+   "reply_to_message_id": 908,
+   "text": "Me caes super  gracias por enseñarme, y tenerme paciencia, Te quiero señor justicia.."
+  },
+  {
+   "id": 917,
+   "type": "message",
+   "date": "2021-05-24T18:19:39",
+   "from": "Paola",
+   "from_id": "user1882680745",
+   "text": "Espero que tengan un bonito fin de trimestre"
+  },
+  {
+   "id": 918,
+   "type": "message",
+   "date": "2021-05-24T18:19:43",
+   "from": "Melissa",
+   "from_id": "user1854866053",
+   "text": "Yo extraño la uam y extraño el frío que hace ahí"
+  },
+  {
+   "id": 919,
+   "type": "message",
+   "date": "2021-05-24T18:20:03",
+   "from": "Yahir 🙄",
+   "from_id": "user1354139004",
+   "reply_to_message_id": 914,
+   "text": "Oh. Qué linda vivian"
+  },
+  {
+   "id": 920,
+   "type": "message",
+   "date": "2021-05-24T18:20:07",
+   "from": "Melissa",
+   "from_id": "user1854866053",
+   "text": "Yo le mando un abrazo a vivian"
+  },
+  {
+   "id": 921,
+   "type": "message",
+   "date": "2021-05-24T18:20:22",
+   "from": "Yahir 🙄",
+   "from_id": "user1354139004",
+   "reply_to_message_id": 915,
+   "text": "Nadia es de pocas palabras, es muy seria pero agradable"
+  },
+  {
+   "id": 922,
+   "type": "message",
+   "date": "2021-05-24T18:20:23",
+   "from": "Tania",
+   "from_id": "user1559865863",
+   "reply_to_message_id": 917,
+   "text": "Gracias Vivan mis mejores deseos.."
+  },
+  {
+   "id": 923,
+   "type": "message",
+   "date": "2021-05-24T18:20:33",
+   "from": "Melissa",
+   "from_id": "user1854866053",
+   "text": "Bueno le mando abrazos a todos"
+  },
+  {
+   "id": 924,
+   "type": "message",
+   "date": "2021-05-24T18:20:39",
+   "from": "Yahir 🙄",
+   "from_id": "user1354139004",
+   "reply_to_message_id": 916,
+   "text": "Denada, también me caes bien... Te quiero"
+  },
+  {
+   "id": 925,
+   "type": "message",
+   "date": "2021-05-24T18:20:46",
+   "from": "Paola",
+   "from_id": "user1882680745",
+   "text": "Todos ustedes me cae super bien"
+  },
+  {
+   "id": 926,
+   "type": "message",
+   "date": "2021-05-24T18:20:54",
+   "from": "Yahir 🙄",
+   "from_id": "user1354139004",
+   "reply_to_message_id": 918,
+   "text": "Si, es bonito estar ahi"
+  },
+  {
+   "id": 927,
+   "type": "message",
+   "date": "2021-05-24T18:21:21",
+   "from": "Yahir 🙄",
+   "from_id": "user1354139004",
+   "reply_to_message_id": 920,
+   "text": "Uy. Melissa al parecer solo quiere a vivían. Ni modo... Asi es la vida"
+  },
+  {
+   "id": 928,
+   "type": "message",
+   "date": "2021-05-24T18:21:30",
+   "from": "Yahir 🙄",
+   "from_id": "user1354139004",
+   "reply_to_message_id": 923,
+   "text": "Ah... Bueno. Asi esta mejor"
+  },
+  {
+   "id": 929,
+   "type": "message",
+   "date": "2021-05-24T18:21:42",
+   "from": "Yahir 🙄",
+   "from_id": "user1354139004",
+   "reply_to_message_id": 925,
+   "text": "Si. Ojalá y quede bien el proyecto"
+  },
+  {
+   "id": 930,
+   "type": "message",
+   "date": "2021-05-24T18:22:26",
+   "from": "Nadia",
+   "from_id": "user1572147191",
+   "reply_to_message_id": 929,
+   "text": "Bueno va a ser un exito"
+  },
+  {
+   "id": 931,
+   "type": "message",
+   "date": "2021-05-24T18:22:50",
+   "from": "Paola",
+   "from_id": "user1882680745",
+   "text": "Sacaremos una MB"
+  },
+  {
+   "id": 932,
+   "type": "message",
+   "date": "2021-05-24T18:22:55",
+   "from": "Melissa",
+   "from_id": "user1854866053",
+   "reply_to_message_id": 927,
+   "text": "Sabes que te quiero, me gusto conocerte más"
+  },
+  {
+   "id": 933,
+   "type": "message",
+   "date": "2021-05-24T18:23:35",
+   "from": "Nadia",
+   "from_id": "user1572147191",
+   "reply_to_message_id": 931,
+   "text": "Neta que si"
+  },
+  {
+   "id": 934,
+   "type": "message",
+   "date": "2021-05-24T18:23:49",
+   "from": "Yahir 🙄",
+   "from_id": "user1354139004",
+   "reply_to_message_id": 932,
+   "text": "Gracias, que linda"
+  },
+  {
+   "id": 935,
+   "type": "message",
+   "date": "2021-05-24T18:23:57",
+   "from": "Yahir 🙄",
+   "from_id": "user1354139004",
+   "text": "Bueno, entonces es todo no?"
+  },
+  {
+   "id": 936,
+   "type": "message",
+   "date": "2021-05-24T18:24:03",
+   "from": "Yahir 🙄",
+   "from_id": "user1354139004",
+   "text": "Con esto ya es suficiente?"
+  },
+  {
+   "id": 937,
+   "type": "message",
+   "date": "2021-05-24T18:24:12",
+   "from": "Paola",
+   "from_id": "user1882680745",
+   "reply_to_message_id": 936,
+   "text": "Creo que si"
+  },
+  {
+   "id": 938,
+   "type": "message",
+   "date": "2021-05-24T18:24:19",
+   "from": "Melissa",
+   "from_id": "user1854866053",
+   "text": "Yo digo que si"
+  },
+  {
+   "id": 939,
+   "type": "message",
+   "date": "2021-05-24T18:25:53",
+   "from": "Yahir 🙄",
+   "from_id": "user1354139004",
+   "text": "Perfecto, gracias a todas. Éxito en su final de trimestre.\nEste fue el último mensaje, exportaré la conversación y se las mando por email. Bye!"
   }
  ]
 }
