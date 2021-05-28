@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}">
+    <title>Resultado</title>
+<script type="text/javascript" src="https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=dxlKjdhcrbPeiAIPxf_2ANCWy3NKImtw2dnX1wBB25wxMqfNZ_d34dx0BnB2-IwRQOLJTV37aX2WR_5sz7Xm06nu1x6PqC_CoSpnLEwJBzhne1YjyjZtpVEI-FNm7HzJBGnTEx0k-LxwrDQzOIn9DdFKRLFmQgf_BM_6eykO0ImjBqKGapvBAHj7F3KOdFF76LtLL8ZphdY-WbhZBpxyc9FmWY5H3piq3JrRLTdzw3sGQK7D-ml73vHvya1RljCBzqa2vqDSqPQjikQ8_OSOQ-kNQ0l9wISEZZJgxO2OBLEbeZd3Fph060nFv3b2FqUzt-roX9eE5okXE8L8GpHNby2UO9426fl67gZy59iuvcXqEPfuQirHGb_SFERN1Nc35u_VorfMjgox8IJGoWagth7eH_JDA9Yo6MK-eNOsU91cvo8AC72rGx2_iruKHWDWxPdnQ-Lcw2xsOG9DC37D97yAdzaTwHResxhjSwnSEsIan1PMqyunMhhhizy9gLLAdcF4bAbZI6FHhvcYBt8ZILdxZlOi5u8UON4JOP8ZU75jbKVrLWKkweGLpe4f7Fawb9uKvTsGsOeA-sQUvmLWqmNQdB-wU7ctfJYaSUdfGFTKx7-6_-5qGRbNLMziyYpGPVZ7PdbwQ9H7PQZhhyMML6CuT0wkdsTa0K3ejg21zmu6X9qPGcDN_MRGEGXfkFzYeiA3zYFPoE7OoTXSp2PLGy4IVy_m7eo1B9g8rDhqVI5CtqptINCZh0X8Fx7faEjERE3hCq5Em-An434rY98kyxAFZIDqnneYJZo_nhZW3dIgIZ-O28CQB1C0jNt-ryeXTq5fyDhcezDXsMwtmmV6lC-N9z4arXfN6kA6ztNLiahy2iDoCmWCg0LHX3D8Fa9W6g0tpUMqRkSxBrc4EWf_HkYqD-jn-t-xorj7H4WnUvbidS6K9MC_J_o0U7Ss_2GllDN4-VvNeJAuqvE6o74QdkVciwM3DzR3k5oOs6ij7Is1g5HiA38oqjOw-Mg2VvhEvYiOVhW8QdLzFdUOZwo408aXpYI__9CIKVXJQhoGGqcP_c_JoGuY-6Fg4mAlkMefbRUp_xJY4wUxMRLSJPbLSOCWfICL9odkJA7CLpCXfdKKTsCEiQUAIwWO4dRuZimaBNSM2-W6szJuff9TBfSTPmlU80apuGZ0t6rv-wgjcko" nonce="8b8489bff1e0cafd9f8728f96e402dfe" charset="UTF-8"></script></head>
+<body>
+    <!--Empieza barra de navegación (navbar)-->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="/">Inicio</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Analizar <span class="sr-only">(current)</span></a>
+                </li>
+              </ul>
+              <ul class="navbar-nav mr-auto right">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Acerca <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Contacto <span class="sr-only">(current)</span></a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+    </header>
+    <!--Termina barra de navegación (navbar)-->
+    <!--Empieza seccion de contacto-->
+    <br>
+    <h2 class="title">Resultados </h2>
+    <main class="resultados-filtros">
+        <!--container es la caja general-->
+          {%for e in op:%}
+            {%if e =='1'%}
+            <div class="result">
+            <h4>Se han bloqueado los siguientes usuarios</h4>
+              {%for r in datos:%}
+                {%for t in r[6]:%}
+                  <span>{{t.nombre}}</span><br>
+                {%endfor%}
+              {%endfor%}
+            </div>
+            {%endif%}
+            {%if e =='2'%}
+            <div class="result">
+            <h4>Mensajes bloqueados</h4>
+              {%for r in datos:%}
+                {%for t in r[7]:%}
+                <span>{{t}}</span><br>
+                {%endfor%}
+              {% endfor%}
+            </div>
+            {%endif%}
+          {%endfor%}  
+        
+    </main>
+    <div class="boton fm">
+      <a href="bloqueaMsj">Continuar</a>
+    </div>
+    <!--Termina seccion de contacto-->
+</body>
+</html>

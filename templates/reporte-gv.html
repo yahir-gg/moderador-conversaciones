@@ -35,25 +35,29 @@
     <main>
         <h2 class="title">Reporte de agresiones</h2>
             <div class="container-mensajes">
-                <span>Usuarios con mensajes agresivos:</span> 
-                {%for e in data:%}
-                  <ul>
+                <h4>Usuarios con mensajes agresivos:</h4> 
+                {%for e in datos:%}
+                  
                     {%for elem in e[4]:%}
-                    <span>Usuario: {{elem.nombre}}</span><br>
-                    <span>ID: {{elem.id}}</span><br>
-                    <span>Cantidad de mensajes agresivos: {{elem.cantidad}}</span><br>
-                    <span>Mensajes:</span><br>
+                    <div class="user">
+
+                      <span class="cabeceras"> Usuario: </span><span>{{elem.nombre}}</span><br>
+                      <span class="cabeceras">ID: </span>{{elem.id}}</span><br>
+                      <span class="cabeceras">Cantidad de mensajes totales: </span>{{elem.totalmsj}}</span><br>
+                      <span class="cabeceras">Cantidad de mensajes agresivos: {{elem.cantidad}}</span><br>
+                      <span class="cabeceras">Mensajes:</span><br>
                       {%for r in e[0]:%}
-                        {%if r['from'] == elem.nombre%}
-                          <span> - {{r['text']}}</span><br>
-                        {%endif%}
+                      {%if r['from'] == elem.nombre%}
+                      <span> - {{r['text']}}</span><br>
+                      {%endif%}
                       {%endfor%}
+                    </div>
                       <br>
                     {%endfor%}
-                  </ul>
+                  
                 {%endfor%}
             </div>
-            <div class="boton fm"><a href="bloqueaMsj">Bloquear mensajes agresivos</a></div>
+            <div class="boton fm"><a href="reporte-dw">Generar PDF</a></div>
 
     </main>
 </body>

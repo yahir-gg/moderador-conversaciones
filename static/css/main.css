@@ -129,7 +129,6 @@ para roboto negrita (Titulos):
 .container-mensajes{
     width: 900px;
     margin: auto;
-    margin-bottom: 30px;
 }
 .mensaje{
     display: flex;
@@ -371,6 +370,10 @@ html, body{
     align-items: center;
     margin: auto;
 }
+#logo_gu{
+    display: flex;
+    justify-content: end;
+}
 #logo_uam img{
     width: 60%;
 }
@@ -381,12 +384,50 @@ html, body{
     margin: auto;
     width: 70%;
     height: 70%;
-    border: #022422 1px solid;
 }
 .reporte-cont{
     margin: auto;
+    padding: 20px;
+    padding-bottom: 0;
     width: 70%;
     height: 100%;
-    border: #022422 1px solid;
-
+    border: #ff8000 2px solid;
+    border-radius: 30px;
+}
+/*---------------------------------reporte gv*/
+.cabeceras{
+    font-weight: 500;
+}
+.container-mensajes.reporte{
+    padding: 20px;
+    border: #022422 solid 2px;
+    border-radius: 30px;
+}
+/*************************************resultados filtros******/
+.checkbox{
+    width: 30%;
+    border: #022422 solid 3px;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+    padding: 30px;
+    border-radius: 30px;
+}
+input[type=checkbox]
+{
+  transform: scale(1.5);
+}
+.resultados-filtros{
+    width: 70%;margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+.result{
+    min-width: 500px;
+    border: #022422 solid 3px;
+}
+.result{
+    margin-right: 30px;
+    padding: 30px;
+    border-radius: 30px;
 }

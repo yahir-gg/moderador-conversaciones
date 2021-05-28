@@ -38,7 +38,7 @@
     <main class="main">
       <h2 class="title">Simulación de chat</h2>
             <div class="container-mensajes">
-              {%for e in resarchivo:%}
+              {%for e in datos:%}
                 {%for elem in e[2]%}
                     <div class="mensaje">
                       <figure class="picture">
@@ -61,7 +61,7 @@
                 
             </div>
             <div class="boton fm">
-              <a href="mensajes-agresivos">Filtrar Mensajes agresivos</a>
+              <a href="elegir-filtros">Seleccionar filtros</a>
             </div>
     </main>    
 </body>
