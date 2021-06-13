@@ -15,10 +15,7 @@ nltk.download('stopwords')
 nltk.download('wordnet')
 
 #from jinja2 import Environment, FileSystemLoader
-import pdfkit
-import os
-from flask import render_template, make_response
-from fpdf import Template
+
 def iniciar():
     
     export=[]
@@ -263,7 +260,10 @@ def iniciar():
 '''
 import json
 import joblib
-
+import pdfkit
+import os
+from flask import render_template, make_response
+from fpdf import Template
 model=joblib.load('model.pkl')
 vect=joblib.load('vectorizer.pkl')
 

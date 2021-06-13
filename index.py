@@ -90,9 +90,17 @@ def dw_reporte():
     options = {"enable-local-file-access": None}
     path_wkhtmltopdf = "C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltopdf.exe"
     config = pdfkit.configuration(wkhtmltopdf=path_wkhtmltopdf)
-    f=open("./templates/reporte-dw.html","r")
-    pdf = pdfkit.from_file(f,'out.pdf', configuration=config, options=options)
-    return render_template('reporte-dw.html')
+    #f=open("./templates/reporte-dw.html","r")
+    #pdf = pdfkit.from_file(f,'out.pdf', configuration=config, options=options)
+    #return render_template('reporte-dw.html')
+    html = render_template(
+        "reporte-dw.html",
+        datos=res,)
+    pdf = pdfkit.from_string(html, False,configuration=config, options=options)
+    response = make_response(pdf)
+    response.headers["Content-Type"] = "application/pdf"
+    response.headers["Content-Disposition"] = "inline; filename=output.pdf"
+    return response
 
 # pagina de contacto
 @app.route('/contacto')
