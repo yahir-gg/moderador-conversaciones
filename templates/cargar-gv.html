@@ -54,14 +54,14 @@
         <h2>Cargar archivo de conversación:</h2>
         <h3> NOTA:</h3><p>Solo se admiten archivos con formato JSON</p>
         
-        <form action="/uploader" method="POST" enctype="multipart/form-data">
+        <form action="/cargar_archivo" method="POST" enctype="multipart/form-data">
             <input type="file" name="archivo">
             <br><br>
             <input type="submit"value="Cargar archivo">
             <input type="hidden"value="gv" id="tipo" name="tipo">
             <div class="msg">{{ msg }}</div>
          </form>
-             <div class="continuar"> 
+             <div class="boton"> 
                 <a href="elegir-filtros"><p>Continuar</p></a>
             </div>
     </div>

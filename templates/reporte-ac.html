@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}">
+    <!--biblioteca para la grafica-->
+    <script type="text/javascript" src="https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=anDYETK8NToNjg2mobtcQynQeKHnSWeiBfh1QEFeYFQmRnE--hIjRYoQEaBx3CtIiBBajUdtdUlnmjvwjX-ujX07tu169Q7KnupN3H6hGCLMfFve-U1ljQgdQRxAxsm_4PjEkGK1Zuu5QMZDRmQGhLiq4K5nTWkaX2GTCb4RRmbiV77Tg88DsZJoP38ZkMC54X24trGS33IrTPDN7AVaWPt0LdvbBQ4CCcPDvoyGBWbSMDuJUIjoUFv_GO6kld8T_5RcKlZ1YvVLFaP88x1fVmBDoCVzYuW1G21DANgck8CEsp4qklGbCOD2tzHzb3TfIImH9kdx3FGOZ74ODAlGEjM9ONZpEJhR6J8ju4cDlMielFzUw2bjwr47KB02IvhzTd-AZdHwq8tRI1-h52BZfzsJcZZBJPNefBx_7cA-MrO9p4lQ0dnx_x67Qfm2UqGB4YU0q2aiebLlFJu27Ie2TB6Agn72HLFrDyIA0Rxzl-bWEfofBI0vuG38tF5KdNPZeQnd2WTRHGBYwJxQMkofbFwVN3uVmzaaNWJZMNjZKEaaI_W0tZuaADaJN8lHbAyMdBEQOhjH430ud_D3UYpaLCS4cAeks6GMhGFhrmQR-zu6BCy5T7YFXQCuLcfRx2oX2YM5sZ5Srktq8qs8Q1DrNIT-t_ITpqgp8t7No241S6yUZjOJV_zuSVf8FFwVpIf3Hwn7Bj4EBzIpsu92E-llpYBcvl4BLu0XVw1sjrYUUEvvhqBtIqGJGkI9Zsx81OH5x6Ta4_o8fr49MDU90lIFSEiRzYJiWAl0S3WukP4Ishr7VhUCB1wMu3jpWRMojRgViMzNS00o5krAcnE2DyD0vcvMXzIz7PJ1OsXUPaE_YDUWxv9FjVqyk3oK1cpbo5RqbvqZKWO18P7RsVcpPIHUoED3j5dKhBboKcLDOzZ6_sRdBhT2WPjyRpeggZZd4iK8j8AVtM4yfc_0_2F51SZg4Yqbm92gQBWqQObNN44s7PVjxH78ZVKxTGQLwEGy7Iil3Qmgvv6zGpAl6WtHEL8-kmJRSBYxmQIv2chz4Gf2rLJtGtfzi3yhukTl1PR0F77YxmA_3F5mUc5s2-9o2kSUPrL7cxFUfgdCaMul33NW3vBj9jI53gKc_p3XjfV5eG-ofoHkgQvU6EwkqKFnNhtN0IcmKHPuLzKd56KW9SOPquU" nonce="daca4454979353e2515c14ead38ac91e" charset="UTF-8"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.0/chart.min.js" integrity="sha512-yadYcDSJyQExcKhjKSQOkBKy2BLDoW6WnnGXCAkCoRlpHGpYuVuBqGObf3g/TdB86sSbss1AOP4YlGSb6EKQPg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Reporte</title>
+</head>
+<body>
+     <!--Empieza barra de navegación (navbar)-->
+     <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="/">Inicio</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="eleccion">Analizar <span class="sr-only">(current)</span></a>
+                </li>
+              </ul>
+              <ul class="navbar-nav mr-auto right">
+                <li class="nav-item active">
+                  <a class="nav-link" href="acerca">Acerca <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="contacto">Contacto <span class="sr-only">(current)</span></a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+    </header>
+    <!--contenedor de la hora de la convesacion parte de nadia -->
+    <br>
+    <h3 class="title">Resultados del análisis </h3>
+    <br>
+    <h4 class="title">Visualización de los mensajes agresivos </h4>
+    
+    <!--container es la caja general-->
+    <main class="resultado-horarios">
+      <div class="result_horarios">
+        <p class="formato_al_texto"> Rango de horario de la convesacion </p>
+        
+          <!--Parte donde salen los horarios -->
+              {%for elem in datos[0]:%}
+              
+                <div class="hora">{{elem}}</div>
+              {%endfor%}
+           </div>
+    </main>
+      
+      <!--contenedor de los mensajes agresivos parte de melisa -->
+      <br>
+             <h4 class="title">Palabras que más repiten </h4>
+               <main class="resultado-horarios">
+                <div class="result_horarios">
+                  {%for e in datos[3]:%}
+                 <p class="formato_al_texto">
+                   
+                  <span>{{e}}</span><br>
+                   
+                </p>
+                   {%endfor%}
+              </div>
+                </main>
+    
+      <br>
+      <!--contenedor de la grafica parte tania  -->
+      <h4 class="title">Distribución de mensajes </h4>
+      <br>
+          <div class="contenido_mensajes"> 
+                    <div class="grafica">
+                      <canvas id="myChart" width="250" height="250"></canvas>
+                      <script>
+                           var ctx = document.getElementById('myChart').getContext('2d');
+                           var xValues = ["No agresivos", "Si agresivos"]; 
+                           var chart = new Chart(ctx, {
+                            type: 'pie',
+                               data:{
+                               labels: xValues,
+	                              datasets: [{
+                                data:['{{elem}}','{{elem1}}'], 
+                                backgroundColor: ['rgba(0,255,0,0.6)','rgba(255,0,0,0.6)'],
+                                 }],
+	                             },
+                               options: {responsive: true}
+                               
+                              });
+                        </script>
+                     </div>
+                       <br><br>
+                        <div class="total-mensajes">
+                              <div class="elementos_totales"> Numero de mensajes totales : {{elem2}}</div>
+                              <br>
+                                 <div class="sangrias"><ul type ="square" style="color:rgba(17, 73, 17, 0.596);"><li>Mensajes no agresivos: {{elem}}</li></ul>
+                                     <ul type ="square" style="color:rgba(255, 0, 0, 0.699);"><li> Mensajes agresivos: {{elem1}} </li></ul>
+                                 </div>                       
+                         </div> 
+                 </div>
+          </div> 
+          <br><br> <br><br> <br><br> <br><br> <br><br> 
+              <form>   
+                  <div class="boton"> 
+                  <a href="/"><p>Continuar</p></a>
+                  </div>
+              </form>
+      
+              <br><br> 
+        </body>
+                                                
+</html>

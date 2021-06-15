@@ -43,25 +43,21 @@
             {%if e =='1'%}
             <div class="result">
               <h4>Mensajes agresivos</h4>
-              {%for r in datos:%}
-              {%for t in r[0]:%}
-              <span>{{t['text']}}</span><br>
-              {%endfor%}
+              {%for r in datos[0]:%}
+                <span>{{r['text']}}</span><br>
               {%endfor%}
             </div>
               {%endif%}
             {%if e =='2'%}
             <div class="result">
               <h4>Usuarios agresivos</h4>
-              {%for r in datos:%}
-              {%for t in r[5]:%}
-              <span>{{t}}</span><br>
-              {%endfor%}
+              {%for r in ua:%}
+                <span>{{r}}</span><br>
               {% endfor%}
             </div>  
             {%endif%}
           {%endfor%}      
-    </main>
+    </main><br>
     <div class="boton fm">
       <a href="elegir-bloqueos">Seleccionar bloqueos</a>
     </div>

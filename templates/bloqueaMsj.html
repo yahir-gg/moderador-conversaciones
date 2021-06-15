@@ -43,30 +43,37 @@
   <main class="bloqueo">
     <h2 class="title">Conversación sin agresividad</h2>
     <div class="container-mensajes"> 
-      {%for e in resModulo2:%}
-      {%for elem in e[3]%}
+      {%for elem in ub:%}
+        {%for e in elem[4]:%}
+        {%if e['from'] in elem[3]:%}
           <div class="mensaje">
             <figure class="picture">
-              {% if e[1].index(elem['from']) % 2 == 0 %}
+              {% if e['from'].index(e['from']) % 2 == 0 %}
                 <div class="circle verde-oscuro" style="background-color: #022422;">
               {% else %}
                 <div class="circle verde-claro" style="background-color: #E8FFE6;">
-                
               {% endif %}
-                  <span class="inicial">{{elem['from'][0]}}</span>
-                </div>
+                <span class="inicial">{{e['from'][0]}}</span>
+              </div>
             </figure>
-            <div class="message-body">
-              <div class="user">{{elem['from']}}</div>
-              <div class="message">{{elem['text']}}</div>
-            </div>
+          <div class="message-body">
+            <div class="user">{{e['from']}}</div>
+            <div class="message">{{e['text']}}</div>
           </div>
+        </div>
+        {%endif%}
       {%endfor%}
       {%endfor%}
 
       
       <div class="button-noAgresivo">
-        <button class="button-bloquea" onclick="location.href='/'">Inicio</button>
+        {%if tipo == 'rs':%}
+        <button class="button-bloquea" onclick="location.href='/'">Finalizar</button>
+        {%elif tipo == 'gv':%}
+        <button class="button-bloquea" onclick="location.href='reporte-gv'">Ver reporte</button>
+        {%elif tipo == 'ac':%}
+        <button class="button-bloquea" onclick="location.href='reporte-ac'">Finalizar</button>
+        {%endif%}
       </div>
   </div>
   </main>

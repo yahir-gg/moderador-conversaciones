@@ -40,29 +40,25 @@
     <main class="resultados-filtros">
         <!--container es la caja general-->
           {%for e in op:%}
-            {%if e =='1'%}
+            {%if e =='2'%}
             <div class="result">
             <h4>Se han bloqueado los siguientes usuarios</h4>
-              {%for r in datos:%}
-                {%for t in r[6]:%}
-                  <span>{{t.nombre}}</span><br>
-                {%endfor%}
+              {%for r in datos[0]:%}
+                <span>{{r}}</span><br>
               {%endfor%}
             </div>
             {%endif%}
-            {%if e =='2'%}
+            {%if e =='1'%}
             <div class="result">
             <h4>Mensajes bloqueados</h4>
-              {%for r in datos:%}
-                {%for t in r[7]:%}
-                <span>{{t}}</span><br>
-                {%endfor%}
+              {%for r in datos[1]:%}
+                <span>{{r['text']}}</span><br>
               {% endfor%}
             </div>
             {%endif%}
           {%endfor%}  
         
-    </main>
+    </main><br>
     <div class="boton fm">
       <a href="bloqueaMsj">Continuar</a>
     </div>

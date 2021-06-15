@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}">
-    <title>Filtro de mensajes agresivos</title>
+    <title>Contacto</title>
 </head>
 <body>
+    <!--Empieza barra de navegación (navbar)-->
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="/">Inicio</a>
@@ -26,40 +27,40 @@
                   <a class="nav-link" href="acerca">Acerca <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                  <a class="nav-link" href="{{url_for('contacto')}}">Contacto <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="contacto">Contacto <span class="sr-only">(current)</span></a>
                 </li>
               </ul>
             </div>
           </nav>
     </header>
-    <main>
-        <h2 class="title">Mensajes</h2>
-            <div class="container-mensajes"> 
-              {%for e in resModulo1:%}
-                {%for elem in e[0]%}
-                    <div class="mensaje">
-                      <figure class="picture">
-                        {% if e[1].index(elem['from']) % 2 == 0 %}
-                          <div class="circle verde-oscuro" style="background-color: #022422;">
-                        {% else %}
-                          <div class="circle verde-claro" style="background-color: #E8FFE6;">
-                          
-                        {% endif %}
-                            <span class="inicial">{{elem['from'][0]}}</span>
-                          </div>
-                      </figure>
-                      <div class="message-body">
-                        <div class="user">{{elem['from']}}</div>
-                        <div class="message">{{elem['text']}}</div>
-                      </div>
-                    </div>
-                {%endfor%}
-              {%endfor%}
-              
-                
+    <!--Termina barra de navegación (navbar)-->
+    <!--Empieza seccion de contacto-->
+    <main class="contacto">
+        <h2 class="title">Acerca de</h2>
+        <!--container es la caja general-->
+        <div class="container">
+            <!--superior es la caja que guarda los users de arriba-->
+            
+            <!--inferior es la caja que tiene los users de abajo-->
+            <div class="inferior">
+                <div class="usuario">
+                    <figure>
+                        <img class="logos" src="{{ url_for('static', filename='media/logo_uam.png') }}" alt="imagen de usuario">
+                        </figure>
+                </div>
+                <div class="usuario">
+                    <figure>
+                        <img class="logos" src="{{ url_for('static', filename='media/logo_gu.png') }}" alt="imagen de usuario">
+                        </figure>
+                </div>
+    
             </div>
-            <div class="boton fm"><a href="bloqueaMsj">Bloquear mensajes agresivos</a></div>
-
+            <p class="title"><strong>Moderador</strong> es un sistema web quesirva como monitor de comentarios agresivosen conversaciones que se dan en entornos virtuales.
+            Puedes subir una conversacion en formato JSON y te daremos una simulación de chat, te mostraremos los mensajes agresivos y en caso de que lo requieras, te 
+            daremos un reporte en formato PDF para comprobar las agresiones.
+            </p>
+        </div>
     </main>
+    <!--Termina seccion de contacto-->
 </body>
 </html>

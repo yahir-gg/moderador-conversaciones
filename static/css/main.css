@@ -109,6 +109,11 @@ para roboto negrita (Titulos):
 .boton.fm{
     padding: 5px;
     height: 55px;
+    line-height: 45px;
+}
+.boton.fm.grande{
+    width: 200px;
+    height: 65px;
 }
 .boton.fm a{
     font-size: 18px;
@@ -277,6 +282,10 @@ html, body{
   background: var(--verde-fuerte);
   text-decoration: none;
   border-radius: 10px;
+  color: #fff;
+}
+.button:hover{
+    cursor: pointer;
 }
 
 /*--------------------------empieza C A R G A R / A R C H I V O-----------*/
@@ -356,6 +365,7 @@ html, body{
     border-color: #022422;
     font-size: 30px;
     text-align: center;
+    margin-bottom: 30px;
 }
 /*-------------------termina BLOQUEA MENSAJES-------------------*/
 .main{
@@ -405,7 +415,7 @@ html, body{
 }
 /*************************************resultados filtros******/
 .checkbox{
-    width: 30%;
+    width: 40%;
     border: #022422 solid 3px;
     text-align: center;
     margin: auto;
@@ -413,10 +423,11 @@ html, body{
     padding: 30px;
     border-radius: 30px;
 }
-input[type=checkbox]
-{
-  transform: scale(1.5);
-}
+
+input[type=checkbox]{
+    transform: scale(1.5);
+    margin-right: 10px;
+  }
 .resultados-filtros{
     width: 70%;margin: auto;
     display: flex;
@@ -431,3 +442,83 @@ input[type=checkbox]
     padding: 30px;
     border-radius: 30px;
 }
+
+.resultado-horarios{
+    width: 70%;margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+.result_horarios{
+    min-width: 500px;
+    border: #022422 solid 3px;/*linea del cuadro*/
+    background: #E8FFE6;/*fondo del cuadro*/
+    text-align: center;/*texto centado*/
+
+}
+.result_horarios{
+    margin-right: 30px;
+    padding: 30px;
+    border-radius: 30px;
+
+}
+.formato_al_texto{
+    font-weight: bold;/*formato en negritas*/
+
+}
+
+.fondo_hora{
+    background: var(--verde-fuerte);
+    border-radius: 10px;
+    color: #fff;
+}
+
+
+.hora_mensaje{
+    width: 180px;
+    height: 45px;
+    background-color: var(--verde-fuerte);
+    border-radius: 50px;
+    color: #022422 solid 3px;/*linea del cuadro*/
+    font-size: 15px;
+    display: block;
+    text-align: center;
+    padding: 10px 11px;
+    margin: 0 auto;
+    color:white;
+}
+
+
+
+/*----------------------------------grafico-------------------------------*/
+
+.grafica{
+    width: 300px;/*tamaño de la grafica*/
+    height: 300px;
+    float: left;
+    margin-left: 290px;
+    
+}
+
+.total-mensajes{
+    font-size: 15px;
+    width: 350px;/*tamaño del total de mensajes*/
+    height: 180px;
+    float: left;
+    text-align: center/*me centra el texto*/;
+    padding: 35px;
+    border: #022422 solid 3px;/*linea del cuadro*/
+    border-radius: 20px;
+    margin-left: 80px;
+    
+}
+.elementos_totales{
+    background-color: var(--verde-fuerte);
+    color: var(--blanco);
+    border-radius: 10px;
+
+}
+.sangrias{
+    text-align: left;
+    
+}
+

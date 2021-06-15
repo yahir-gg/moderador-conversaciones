@@ -24,23 +24,22 @@
                 <h4>Usuarios con mensajes agresivos:</h4> <br>
                 {%for e in datos:%}
                   
-                    {%for elem in e[4]:%}
                     
-                    <span class="cabeceras">Usuario:</span> {{elem.nombre}}<br>
-                    <span class="cabeceras">ID:</span> {{elem.id}}</span><br>
-                    <span class="cabeceras">Cantidad de mensajes totales:</span> {{elem.totalmsj}}</span><br>
-                    <span class="cabeceras">Cantidad de mensajes agresivos:</span> {{elem.cantidad}}</span><br>
+                    <span class="cabeceras">Usuario:</span> {{e.nombre}}<br>
+                    <span class="cabeceras">ID:</span> {{e.id}}</span><br>
+                    <span class="cabeceras">Cantidad de mensajes totales:</span> {{e.totalmsj}}</span><br>
+                    <span class="cabeceras">Cantidad de mensajes agresivos:</span> {{e.cantidad}}</span><br>
                     <span class="cabeceras">Mensajes:</span><br>
-                      {%for r in e[0]:%}
-                        {%if r['from'] == elem.nombre%}
+                      {%for r in mensajes[0]:%}
+                        {%if r['from'] == e.nombre%}
                           <span> - {{r['text']}}</span><br>
                         {%endif%}
                       {%endfor%}
                       <br>
-                    {%endfor%}
-                  
+                    
                 {%endfor%}
             </div>
+            <a href="/descargar">Generar PDF</a>
         </div>
     </main>
     </body>

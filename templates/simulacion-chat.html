@@ -39,7 +39,7 @@
       <h2 class="title">Simulación de chat</h2>
             <div class="container-mensajes">
               {%for e in datos:%}
-                {%for elem in e[2]%}
+                {%for elem in e[0]%}
                     <div class="mensaje">
                       <figure class="picture">
                         {% if e[1].index(elem['from']) % 2 == 0 %}
