@@ -157,7 +157,7 @@ def cargar_archivo():
         msg='Archivo cargado con exito'
         res.append(modulo2.leer_archivo())
         nombre_archivo, extension = os.path.splitext("archivo.json")
-        if extension=="json":
+        if extension==".json":
             for elem in res:
                 print(elem)
             if tipo == 'rs':
@@ -167,7 +167,7 @@ def cargar_archivo():
             elif tipo == 'ac':
                 return render_template('cargar-ac.html',msg=msg)
         else:
-            msg="Error. Solo se aceptan archivos en formato JSON"
+            msg=extension
             return render_template ('cargar-rs.html',msg=msg)
 
 @app.route('/reporte-ac')
@@ -176,8 +176,8 @@ def reporte_ac():
         datos = modulo2.predecir_agresividad(elem)
     ua = modulo2.obtener_usuarios_agresivos(datos)
     users = modulo2.creacion_objetos(ua)
-    ub = modulo2.bloquear_usuarios(users)
-    ac = modulo2.reporte_academico(ub)
+    ub = modulo2.bloquear_usuarios(users,opciones)
+    ac = modulo2.reporte_academico(ub,opciones)
 
     nueva = 0 
     nueva2 = 0

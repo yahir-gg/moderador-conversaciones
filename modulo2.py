@@ -169,7 +169,7 @@ def bloquear_usuarios(users, opciones):
     #print(bloqueaUsers)
 
     #resultado[0][3]
-def reporte_academico(lista):
+def reporte_academico(lista,opciones):
     blockUsers = lista
     msjAgrUs = []
     data = leer_archivo()
