@@ -18,7 +18,7 @@ _ibrerías que se deben instalar: pandas, nltl, sklearn, fpdf, werkzeug, pdfkit 
 ejemplo: pip install pandas
 ```
 
-### Instalación 🔧
+### Ejecutar 🔧
 
 _Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose_
 
@@ -39,7 +39,7 @@ _Abrir localhost en navegador_
 
 _De Nova Nadia_
 _García Melissa_
-_García Yahir
+_García Yahir_
 _Reynoso Vivian_
 _Salazar Tania_
 
