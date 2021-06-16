@@ -155,12 +155,17 @@ def bloquear_usuarios(users, opciones):
                 msj_av.append(i['text'])
             else:
                 msj_bk.append(i['text'])
-    for op in opciones:
-        if op == "2":
-            return blockUsers,msj_bk,msj_av, no_bk_users, mensajes
-        else:
-            return blockUsers,pred[0],pred[1], all_user, pred[1]
+    
+    if len(opciones)==2:
+        return blockUsers,pred[0],pred[1], no_bk_users, pred[1]
+    else:
+        for op in opciones:
+            if op == "2":
+                return blockUsers,msj_bk,msj_av, no_bk_users, mensajes
+            elif op=="1":
+                return blockUsers,pred[0],pred[1], all_user, pred[1]
             
+
                 
             
    

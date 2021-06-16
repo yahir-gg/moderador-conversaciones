@@ -167,7 +167,7 @@ def cargar_archivo():
             elif tipo == 'ac':
                 return render_template('cargar-ac.html',msg=msg)
         else:
-            msg=extension
+            msg="Error. Solo se aceptan archivos con formato JSON"
             return render_template ('cargar-rs.html',msg=msg)
 
 @app.route('/reporte-ac')
