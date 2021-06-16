@@ -1,6 +1,6 @@
-# Título del Proyecto
+# Moderador de comenatarios agresivos
 
-Moderador de comenatarios agresivos
+
 
 ## Comenzando 🚀
 
